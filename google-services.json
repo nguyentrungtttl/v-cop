@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "810273520335",
+    "project_id": "fir-traffic-a5c0b",
+    "storage_bucket": "fir-traffic-a5c0b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:810273520335:android:72462f304d9ada81a815ba",
+        "android_client_info": {
+          "package_name": "straffic.khkt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "810273520335-etj2iodmv73jcbmar3p0ksf9m45nqfbe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhPlmOk6q30Df1a2dsA3OrpRhCXHX5pho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            { 
+              "client_id": "810273520335-etj2iodmv73jcbmar3p0ksf9m45nqfbe.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "810273520335-dcudmeiu2u5s8lfmub26e7hlh6arerou.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "S-Traffic"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
