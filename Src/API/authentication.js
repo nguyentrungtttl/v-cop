@@ -6,8 +6,10 @@ export const handleLogin = async(email, password)=>{
     try{
         const response = await signInWithEmailAndPassword( FIREBASE_AUTH, email,password)
         console.log(response);
+        return true;
     } catch (error){
         console.log(error);
+        return false;
     }
   }
 

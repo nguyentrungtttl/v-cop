@@ -13,13 +13,14 @@ import SignUp from '../../Authentication/signUp';
 const Stack = createStackNavigator();
 
 export default function Home() {
+
   return (
-      <Stack.Navigator initialRouteName="MainHome">
-        {/* <Stack.Screen name="MainHome" component={MainHome} />
+      <Stack.Navigator initialRouteName="Signup">
+        <Stack.Screen name="SignUp" component={SignUp} />
+        <Stack.Screen name="MainHome" component={MainHome} />
         <Stack.Screen name="EWallet" component={EWallet} />
         <Stack.Screen name="Report" component={Report} />
-        <Stack.Screen name="Notification" component={Notification} /> */}
-        <Stack.Screen name="SignUp" component={SignUp} />
+        <Stack.Screen name="Notification" component={Notification} />
       </Stack.Navigator>
   )
 }
