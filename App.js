@@ -8,8 +8,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <PaperProvider>
-        <UserNavigator />
-        {/* <PoliceNavigator /> */}
+        {/* <UserNavigator /> */}
+        <PoliceNavigator />
       </PaperProvider>
     </View>
   );
