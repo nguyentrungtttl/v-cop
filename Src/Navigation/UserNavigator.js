@@ -62,6 +62,7 @@ export default function UserNavigator() {
           name="Home"
           component={Home}
           options={{
+            headerShown: false,
             tabBarLabel: "Trang chủ",
             tabBarIcon: ({ color, size }) => {
               return <Icon name="home" size={size} color={color} />;
@@ -72,6 +73,7 @@ export default function UserNavigator() {
           name="Account"
           component={Account}
           options={{
+            headerShown: false,
             tabBarLabel: "Tài khoản",
             tabBarIcon: ({ color, size }) => {
               return <Icon name="cog" size={size} color={color} />;
