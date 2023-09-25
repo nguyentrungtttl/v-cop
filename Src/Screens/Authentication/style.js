@@ -24,18 +24,19 @@ const styles= StyleSheet.create({
     },
     lead: {
         color:"#6A707C",
-        fontWeight: 600,
+        // fontWeight: 600,
         borderWidth: 0.2,
         borderColor: "#E8ECF4",
         marginTop: "10%",
         marginBottom:"5%"
     },
     boldWhite:{
-        fontFamily: "Inter",
+        // fontFamily: "Inter",
         fontSize: 15,
-        fontWeight: 600,
-        lineHeight: 18,        
-        letterSpacing: "0em",
+        // fontWeight: 600,
+        lineHeight: 18,   
+             
+        // letterSpacing: "0em",
         textAlign: "center",
         color: "white"
     },
@@ -50,7 +51,7 @@ const styles= StyleSheet.create({
     },
     bluetxt:{
         color:"#143072",
-        fontWeight: "bold",
+        // fontWeight: "bold",
     }
 })
 

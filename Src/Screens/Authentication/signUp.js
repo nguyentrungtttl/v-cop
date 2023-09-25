@@ -1,13 +1,17 @@
 import React,{useState} from 'react'
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native'
 import styles from './style'
+import { handleSignUp } from '../../API/authentication'
 
 const SignUp =({navigation}) =>{
   const [username,setUsername] = useState('')
   const [id,setId] =useState('')
-  const [phoneNum] = useState('')
-  const [passWord,setPassWord] = useState('')
-
+  const [phoneNum, setPhoneNum] = useState('')
+  const [password,setPassword] = useState('')
+  const handleSignUpFunc = async ()=>{
+    const a = await handleSignUp({id, password, username, phoneNum})
+    console.log(a);
+  }
   return(
     <View style={styles.container}>
 
@@ -16,11 +20,11 @@ const SignUp =({navigation}) =>{
 
       <View>
         <Text style={styles.lead}>───────── Tạo tài khoản ─────────</Text>
-        <TextInput style={styles.textInput} placeholder="Họ và tên" onChangeText={username}/>
-        <TextInput style={styles.textInput} placeholder="Căn cước công dân" onChangeText={id} />
-        <TextInput style={styles.textInput} placeholder="Số điện thoại" onChangeText={phoneNum} />
-        <TextInput style={styles.textInput}  placeholder='Mật khẩu' onChangeText={passWord} />
-        <TouchableOpacity style={styles.btn}>
+        <TextInput style={styles.textInput} placeholder="Họ và tên" onChangeText={text =>setUsername(text)}/>
+        <TextInput style={styles.textInput} placeholder="Căn cước công dân" onChangeText={text => setId(text)} />
+        <TextInput style={styles.textInput} placeholder="Số điện thoại" onChangeText={text => setPhoneNum(text)} />
+        <TextInput style={styles.textInput}  placeholder='Mật khẩu' onChangeText={text => setPassword(text)} />
+        <TouchableOpacity style={styles.btn} onPress={handleSignUpFunc}>
           <Text style={styles.boldWhite}>ĐĂNG KÝ</Text>
         </TouchableOpacity>
       </View>
