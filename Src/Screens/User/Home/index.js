@@ -9,14 +9,17 @@ import EWallet from './EWallet';
 import Report from './Report';
 import Notification from './Notification';
 import SignUp from '../../Authentication/signUp';
+import Login from '../../Authentication/login'
+
 
 const Stack = createStackNavigator();
 
 export default function Home() {
 
   return (
-      <Stack.Navigator initialRouteName="Signup">
+      <Stack.Navigator initialRouteName="SignUp">
         <Stack.Screen name="SignUp" component={SignUp} />
+        <Stack.Screen name="Login" component={Login}/>
         <Stack.Screen name="MainHome" component={MainHome} />
         <Stack.Screen name="EWallet" component={EWallet} />
         <Stack.Screen name="Report" component={Report} />
