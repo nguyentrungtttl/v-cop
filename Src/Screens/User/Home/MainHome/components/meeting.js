@@ -37,7 +37,7 @@ const styles= StyleSheet.create({
         // fontFamily: "Inter",
         fontSize: 14,
         fontWeight: "bold",
-        lineHeight: 16,
+        // lineHeight: 16,
         // letterSpacing: "0em",
         textAlign: "left",
         color:"#143072",
@@ -47,8 +47,8 @@ const styles= StyleSheet.create({
     location:{
         fontFamily: "Inter",
         fontSize: 12,
-        fontWeight: 400,
-        lineHeight: 16,
+        // fontWeight: 400,
+        // lineHeight: 16,
         letterSpacing: "0em",
         left:"10%",
         top:"30%",
@@ -60,16 +60,16 @@ const styles= StyleSheet.create({
     lead:{
         // fontFamily: "Inter",
         fontSize: 12,
-        fontWeight: 400,
-        lineHeight: 16,
+        // fontWeight: 400,
+        // lineHeight: 16,
         // letterSpacing: "0em"
         color:"#090808AB"
     },
     date:{
         // fontFamily: "Inter",
         fontSize: 10,
-        fontWeight: 700,
-        lineHeight: 16,
+        // fontWeight: 700,
+        // lineHeight: 16,
         color:"#556A92",
         // letterSpacing: "0em"
     }

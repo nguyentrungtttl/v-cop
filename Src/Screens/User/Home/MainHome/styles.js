@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
         // fontFamily: "Open Sans",
         fontSize: 20,
         // fontWeight: 700,
-        lineHeight: 24,
+        // lineHeight: 24,
         // letterSpacing: "-0.05em",
         color:"white"
     },
