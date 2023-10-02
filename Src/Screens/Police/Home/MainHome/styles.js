@@ -14,16 +14,16 @@ export const styles = StyleSheet.create({
     whiteBig:{
         // fontFamily: "Open Sans",
         fontSize: 20,
-        fontWeight: 700,
-        lineHeight: 24,
+        // fontWeight: 700,
+        // lineHeight: 24,
         // letterSpacing: "-0.05em",
         color:"white"
     },
     whiteSmall:{
         // fontFamily: "Open Sans",
         fontSize: 10,
-        fontWeight: 700,
-        lineHeight: 15,
+        // fontWeight: 700,
+        // lineHeight: 15,
         // letterSpacing: "-0.05em",
         color:"white"
     },
@@ -31,7 +31,7 @@ export const styles = StyleSheet.create({
         // fontFamily: "Roboto",
         fontSize: 14,
         fontWeight: "bold",
-        lineHeight: 21,
+        // lineHeight: 21,
         // letterSpacing: "0.30000001192092896",
         marginVertical:"7%",
         color:"black"
@@ -40,7 +40,7 @@ export const styles = StyleSheet.create({
         // fontFamily: "Roboto",
         fontSize: 15,
         fontWeight: "bold",
-        lineHeight: 21,
+        // lineHeight: 21,
         // letterSpacing: 0.30000001192092896,
         marginRight:"30%"
     },
@@ -48,7 +48,7 @@ export const styles = StyleSheet.create({
         // fontFamily: "Roboto",
         fontSize: 15,
         fontWeight: "bold",
-        lineHeight: 21,
+        // lineHeight: 21,
         // letterSpacing: 0.30000001192092896,
         left:"200%"
     }
