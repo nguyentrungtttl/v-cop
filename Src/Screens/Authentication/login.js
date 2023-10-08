@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native'
 import styles from './style'
+import { handleLogin } from '../../API/authentication'
 
 const Login =({navigation}) =>{
   const [username,setUsername] = useState('')
@@ -10,7 +11,7 @@ const Login =({navigation}) =>{
   return(
     <View style={styles.container}>
 
-      <Image style={styles.logo}source={require('../../assets/vcop.png')} />
+      <Image style={styles.logo}source={require('../../assets/vCop.png')} />
 
 
       <View>

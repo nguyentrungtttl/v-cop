@@ -45,10 +45,10 @@ const styles= StyleSheet.create({
         left:"8%"
     },
     location:{
-        fontFamily: "Inter",
+        // fontFamily: "Inter",
         fontSize: 12,
-        fontWeight: 400,
-        lineHeight: 16,
+        // fontWeight: 400,
+        // lineHeight: 16,
         // letterSpacing: "0em",
         left:"10%",
         top:"30%",
