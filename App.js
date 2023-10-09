@@ -8,7 +8,6 @@ import MainHome from "./Src/Screens/User/Home/MainHome";
 import Account from './Src/Screens/User/Account/index'
 
 export default function App() {
-
   return (
     <View style={styles.container}>
       <PaperProvider>
