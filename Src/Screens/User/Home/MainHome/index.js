@@ -55,13 +55,14 @@ export default function MainHome({navigation}) {
             </TouchableOpacity>
           </View>
 
-          <FlatList style={{flex:0.4,marginTop:"15%"}}
+
+
+        </View>
+        <FlatList style={{flex:0.4,marginTop:"15%"}}
           data={faults}
           renderItem={Fault}/>
 
-        </View>
-
-        <View></View>
+        
       </View>
     </View>
   )

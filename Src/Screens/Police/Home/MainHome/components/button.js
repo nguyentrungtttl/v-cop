@@ -38,8 +38,8 @@ const style = StyleSheet.create({
     title:{
         // fontFamily: "Inter",
         fontSize: 16,
-        fontWeight: 500,
-        lineHeight: 16,
+        // fontWeight: 500,
+        // lineHeight: 16,
         // letterSpacing: "0em",
         textAlign: "center",
     }
