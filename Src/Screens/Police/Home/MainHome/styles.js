@@ -9,7 +9,8 @@ export const styles = StyleSheet.create({
         backgroundColor:"white",
         top:"60%",
         alignItems:"center",
-        borderRadius: 16
+        borderRadius: 16,
+        height: 700
     },
     whiteBig:{
         // fontFamily: "Open Sans",

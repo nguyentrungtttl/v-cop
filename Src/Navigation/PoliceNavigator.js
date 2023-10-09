@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet,Image } from "react-native";
 import { NavigationContainer, CommonActions } from "@react-navigation/native"; // Import NavigationContainer
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Text, BottomNavigation } from "react-native-paper";
@@ -7,6 +7,7 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 import Home from "../Screens/Police/Home";
 import Account from "../Screens/Police/Account";
+import ViolatorContact from "../Screens/Police/Home/ViolatorContact";
 const Tab = createBottomTabNavigator();
 
 export default function PoliceNavigator() {
@@ -65,6 +66,15 @@ export default function PoliceNavigator() {
             tabBarLabel: "Trang chủ",
             tabBarIcon: ({ color, size }) => {
               return <Icon name="home" size={size} color={color} />;
+            },
+          }}
+        />
+        <Tab.Screen
+          name="Violator"
+          component={ViolatorContact}
+          options={{
+            tabBarIcon: () => {
+              return <Image source={require("../assets/scan.png")} />;
             },
           }}
         />

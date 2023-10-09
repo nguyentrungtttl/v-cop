@@ -43,7 +43,7 @@ export default function MainHome({navigation}) {
       <View style={styles.container}>
         <View>
           <Text style={styles.leading}>Tính năng người dùng</Text>
-          <TaskBtn title="Thông báo" title2="vi phạm" source={require('./components/workOnline.png')} />
+          <TaskBtn title="Thông báo" title2="vi phạm" source={require('./components/workOnline.png')} onPress={()=>navigation.navigate("Evidence")} />
         </View>
 
         <View>
@@ -55,12 +55,12 @@ export default function MainHome({navigation}) {
             </TouchableOpacity>
           </View>
 
-          <FlatList style={{flex:0.4,marginTop:"15%"}}
-          data={violator}
-          renderItem={Violator}/>
+
 
         </View>
-
+        <FlatList style={{flex:0.4,marginTop:"15%"}}
+          data={violator}
+          renderItem={Violator}/>
         <View></View>
       </View>
     </View>

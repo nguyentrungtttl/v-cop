@@ -9,12 +9,13 @@ import Evidence from './Evidence';
 import Form from './Form';
 import FormHandle from './FormHandle';
 import ViolatorContact from './ViolatorContact';
+import Account from '../Account';
 
 const Stack = createStackNavigator();
 
 export default function Home() {
   return (
-      <Stack.Navigator initialRouteName="MainHome">
+      <Stack.Navigator initialRouteName="MainHome" screenOptions={{headerShown:false}}>
         <Stack.Screen name="MainHome" component={MainHome} />
         <Stack.Screen name="Evidence" component={Evidence} />
         <Stack.Screen name="Form" component={Form} />
