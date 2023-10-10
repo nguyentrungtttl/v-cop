@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet ,Image  } from "react-native";
 import { NavigationContainer, CommonActions } from "@react-navigation/native"; // Import NavigationContainer
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Text, BottomNavigation } from "react-native-paper";
@@ -7,6 +7,7 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 import Home from "../Screens/User/Home";
 import Account from "../Screens/User/Account";
+import EWallet from "../Screens/User/Home/EWallet/index";
 const Tab = createBottomTabNavigator();
 
 export default function UserNavigator() {
@@ -69,17 +70,30 @@ export default function UserNavigator() {
             },
           }}
         />
+         <Tab.Screen
+          name="EWallet"
+          component={EWallet}
+          options={{
+            headerShown: false,
+            tabBarLabel: "Ví điện tử",
+            tabBarIcon: () => {
+              return <Image source={require('../assets/card.png')}/>;
+            },
+          }}
+        />
         <Tab.Screen
           name="Account"
           component={Account}
           options={{
             headerShown: false,
             tabBarLabel: "Tài khoản",
-            tabBarIcon: ({ color, size }) => {
+            tabBarIcon: ({size,color}) => {
               return <Icon name="cog" size={size} color={color} />;
             },
           }}
         />
+
+
       </Tab.Navigator>
     </NavigationContainer>
   );

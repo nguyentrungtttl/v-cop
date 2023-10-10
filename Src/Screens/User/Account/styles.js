@@ -6,9 +6,9 @@ export const styles = StyleSheet.create({
     },
     avatar:{
         width: 100,
-        height: 57,
-        borderRadius: 52,
-        flex: 0.26,
+        height: 55,
+        borderRadius: "50%",
+        flex: 0.35,
         top: "10%",
         left:"38%"
     },
