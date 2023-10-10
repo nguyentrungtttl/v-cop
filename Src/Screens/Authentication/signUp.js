@@ -11,6 +11,7 @@ const SignUp =({navigation}) =>{
   const handleSignUpFunc = async ()=>{
     const a = await handleSignUp({id, password, username, phoneNum})
     console.log(a);
+    navigation.navigate("Login")
   }
   return(
     <View style={styles.container}>
@@ -31,7 +32,7 @@ const SignUp =({navigation}) =>{
 
       <View style={[{flexDirection:"row",top: "10%"}]}>
         <Text style={[{right: "35%"}]}>Bạn đã có tài khoản?</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=> navigation.navigate("Login")}>
           <Text style={styles.bluetxt} >Đăng nhập</Text>
         </TouchableOpacity>
       </View>

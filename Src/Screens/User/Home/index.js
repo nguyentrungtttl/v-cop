@@ -18,11 +18,15 @@ const Stack = createStackNavigator();
 export default function Home() {
 
   return (
-      <Stack.Navigator initialRouteName="MainHome">
+
+      <Stack.Navigator initialRouteName="MainHome" screenOptions={{headerShown: false}}>
+
+        <Stack.Screen name="Account" component={Account}/>
         <Stack.Screen name="MainHome" component={MainHome} />
         <Stack.Screen name="Account" component={Account}/>
         <Stack.Screen name="EWallet" component={EWallet} />
-        <Stack.Screen name="Report" component={Report} />
+        {/* Hướng phát triển */}
+        {/* <Stack.Screen name="Report" component={Report} /> */}
         <Stack.Screen name="Notification" component={Notification} />
       </Stack.Navigator>
   )
