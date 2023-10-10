@@ -7,6 +7,7 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 import Home from "../Screens/Police/Home";
 import Account from "../Screens/Police/Account";
+import ViolatorContact from "../Screens/Police/Home/ViolatorContact";
 const Tab = createBottomTabNavigator();
 
 export default function PoliceNavigator() {
@@ -65,6 +66,17 @@ export default function PoliceNavigator() {
             tabBarLabel: "Trang chủ",
             tabBarIcon: ({ color, size }) => {
               return <Icon name="home" size={size} color={color} />;
+            },
+          }}
+        />
+        <Tab.Screen
+          name="Scan"
+          component={ViolatorContact}
+          options={{
+            headerShown: false,
+
+            tabBarIcon: () => {
+              return <Image source={require('../assets/scan.png')}/>;
             },
           }}
         />

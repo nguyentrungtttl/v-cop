@@ -14,7 +14,7 @@ const Stack = createStackNavigator();
 
 export default function Home() {
   return (
-      <Stack.Navigator initialRouteName="MainHome">
+      <Stack.Navigator initialRouteName="MainHome" screenOptions={{headerShown:false}}>
         <Stack.Screen name="MainHome" component={MainHome} />
         <Stack.Screen name="Evidence" component={Evidence} />
         <Stack.Screen name="Form" component={Form} />
