@@ -7,8 +7,7 @@ export const styles = StyleSheet.create({
     avatar:{
         width: 100,
         height: 55,
-        // borderRadius: "50%",
-        flex: 0.24,
+
         top: "10%",
         left:"38%"
     },
@@ -19,8 +18,7 @@ export const styles = StyleSheet.create({
     text:{
         // fontFamily: "Roboto",
         fontSize: 20,
-        fontWeight: 700,
-        lineHeight: 24,
+
         // letterSpacing: "0.30000001192092896",
         textAlign: "center",
         color:"#1D3A70"
@@ -28,8 +26,7 @@ export const styles = StyleSheet.create({
     phoneNum:{
         // fontFamily: "Roboto",
         fontSize: 12,
-        fontWeight: 400,
-        lineHeight: 18,
+
         // letterSpacing: "0.30000001192092896",
         textAlign: "center",
         color:"#6B7280"
