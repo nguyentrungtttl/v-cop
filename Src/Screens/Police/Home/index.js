@@ -9,6 +9,7 @@ import Evidence from './Evidence';
 import Form from './Form';
 import FormHandle from './FormHandle';
 import ViolatorContact from './ViolatorContact';
+import Account from '../Account';
 
 const Stack = createStackNavigator();
 

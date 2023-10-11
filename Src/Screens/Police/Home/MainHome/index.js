@@ -57,6 +57,7 @@ export default function MainHome({navigation}) {
 
 
 
+
         </View>
         <FlatList style={{flex:0.4,marginTop:"15%"}}
           data={faults}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Button, Image, Text } from 'react-native';
+import { View, Button, Image, Text,SafeAreaView,TouchableOpacity, } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import recognitionPlate from '../../../../API/recognition';
 import { styles } from './styles';
@@ -39,9 +39,16 @@ export default function ViolatorContact() {
   };
 
   return (
-    <View style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1 }}>
-        <Button title="Take Photo" onPress={handleTakePhoto} />
+
+        <TouchableOpacity style={{alignItems:"center",marginTop:"5%"}} onPress={handleTakePhoto}>
+          <Image source={require("../../../../assets/Camera.png")} />
+        </TouchableOpacity>
+
+        <TouchableOpacity>
+          <Text>Tạo biên bản thủ công</Text>
+        </TouchableOpacity>
 
         {imageUri ? (
           <View>
@@ -57,6 +64,6 @@ export default function ViolatorContact() {
           </View>
         )}
       </View>
-    </View>
+    </SafeAreaView>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet,Image } from "react-native";
 import { NavigationContainer, CommonActions } from "@react-navigation/native"; // Import NavigationContainer
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Text, BottomNavigation } from "react-native-paper";
@@ -69,17 +69,7 @@ export default function PoliceNavigator() {
             },
           }}
         />
-        <Tab.Screen
-          name="Scan"
-          component={ViolatorContact}
-          options={{
-            headerShown: false,
-
-            tabBarIcon: () => {
-              return <Image source={require('../assets/scan.png')}/>;
-            },
-          }}
-        />
+    
         <Tab.Screen
           name="Account"
           component={Account}
