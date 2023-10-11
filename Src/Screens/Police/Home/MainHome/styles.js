@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
         alignItems:"center",
         borderRadius: 16,
         height: 700
+
     },
     whiteBig:{
         // fontFamily: "Open Sans",

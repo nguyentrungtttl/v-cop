@@ -69,15 +69,7 @@ export default function PoliceNavigator() {
             },
           }}
         />
-        <Tab.Screen
-          name="Violator"
-          component={ViolatorContact}
-          options={{
-            tabBarIcon: () => {
-              return <Image source={require("../assets/scan.png")} />;
-            },
-          }}
-        />
+    
         <Tab.Screen
           name="Account"
           component={Account}

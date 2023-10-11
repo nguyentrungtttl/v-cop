@@ -37,7 +37,7 @@ const styles= StyleSheet.create({
         // fontFamily: "Inter",
         fontSize: 14,
         fontWeight: "bold",
-        lineHeight: 16,
+        // lineHeight: 16,
         // letterSpacing: "0em",
         textAlign: "left",
         color:"#143072",

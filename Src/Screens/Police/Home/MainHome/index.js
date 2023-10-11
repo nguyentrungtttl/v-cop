@@ -8,21 +8,21 @@ import Meeting from './components/meeting'
 
 export default function MainHome({navigation}) {
   const [count,setCount] = useState(0)
-  const [violator,setViolator]=useState(
+  const [faults,setFault]=useState(
     [
-      {name:"Bánh bao thịt",id:1},
-      {name:"Bánh mì trứng",id:2},
-      {name:"Bánh đậu đỏ",id:3},
-      {name:"Bánh nhúng Hà Nội",id:4},
-      {name:"Phở Lý Quốc Sư",id:5},
+      {name:"Đậu xe sai vị trí",id:1},
+      {name:"Không đội mũ bảo hiểm",id:2},
+      {name:"Vượt đèn đỏ",id:3},
+      {name:"Vượt đèn đỏ",id:4},
+      {name:"Vượt đèn đỏ",id:5},
     ]
   )
-  const Violator = ({item}) => (
+  const Fault = ({item}) => (
     <ScrollView><Meeting violator={item} district={district} city={city} date={date} Mtime={hour}/></ScrollView>
   )
   const [district,setDistrict]=useState('Hải Châu')
   const [city,setCity]=useState('Đà Nẵng')
-  const [date,setDate] = useState('27/9/2023')
+  const [date,setDate] = useState('26/9/2023')
   const [hour,setHour] = useState('8h00')
   const now = new Date()
   const month = now.getMonth()+1
@@ -57,11 +57,13 @@ export default function MainHome({navigation}) {
 
 
 
+
         </View>
         <FlatList style={{flex:0.4,marginTop:"15%"}}
-          data={violator}
-          renderItem={Violator}/>
-        <View></View>
+          data={faults}
+          renderItem={Fault}/>
+
+        
       </View>
     </View>
   )
