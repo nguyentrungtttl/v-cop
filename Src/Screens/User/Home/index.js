@@ -21,7 +21,7 @@ export default function Home() {
 
       <Stack.Navigator initialRouteName="MainHome" screenOptions={{headerShown: false}}>
 
-        <Stack.Screen name="Account" component={Account}/>
+
         <Stack.Screen name="MainHome" component={MainHome} />
         <Stack.Screen name="Account" component={Account}/>
         <Stack.Screen name="EWallet" component={EWallet} />
