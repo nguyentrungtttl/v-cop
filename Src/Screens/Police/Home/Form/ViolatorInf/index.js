@@ -1,45 +1,58 @@
-import { SafeAreaView, View, Text, Image, TouchableOpacity } from "react-native";
+import { useState } from "react";
+import { SafeAreaView, View, Text, Image, TouchableOpacity, ScrollView } from "react-native";
+import {styles} from './style'
 
 export default function ViolatorInf({navigation}){
+    const violator = "Nguyễn Văn B"
+    const phoneNum = "09123#######"
+    const address = "12A Trần Đăng Ninh"
+    const [count,setCount] = useState(0)
     return(
-        <SafeAreaView>
-            <Text>THÔNG TIN CHỦ XE</Text>
-
-            <Text>Tên chủ phương tiện</Text>
-            <Text>{violator}</Text>
-
-            <Text>Số điện thoại</Text>
-            <Text>{phoneNum}</Text>
-
-            <Text>Địa chỉ thường trú</Text>
-            <Text>{address}</Text>
-
-            <Text>HỒ SƠ ĐĂNG KIỂM</Text>
-            <Image />
-
-            <Text>BẰNG LÁI XE</Text>
-            <Image />
-
-            <Text>LỊCH SỬ VI PHẠM</Text>
-            <Text>Có {count} kết quả</Text>
-            <View></View>
-
-            <Text>GIẤY ĐĂNG KÝ XE</Text>
-            <Image/>
-
+        <ScrollView>
             <View>
-                <TouchableOpacity>
-                    <Text>TẠO BIÊN BẢN</Text>
-                </TouchableOpacity>
+                <Text style={[styles.header,{marginTop:"20%"}]}>THÔNG TIN CHỦ XE</Text>
+                
+                <Text style={styles.black}>Tên chủ phương tiện</Text>
+                <Text style={styles.textBox}>{violator}</Text>
 
-                <TouchableOpacity>
-                    <Text>TẠO ĐƠN THÔNG BÁO</Text>
-                </TouchableOpacity>
+                <Text style={styles.black}>Số điện thoại</Text>
+                <Text style={styles.textBox}>{phoneNum}</Text>
+
+                <Text style={styles.black}>Địa chỉ thường trú</Text>
+                <Text style={styles.textBox}>{address}</Text>
+                
+
+                <Text style={styles.header}>HỒ SƠ ĐĂNG KIỂM</Text>
+                <Image style={styles.image} />
+
+                <Text style={styles.header}>BẰNG LÁI XE</Text>
+                <Image style={styles.image} />
+
+
+                <View>
+                    <Text style={styles.header}>LỊCH SỬ VI PHẠM</Text>
+                    <Text style={{left:"7%"}}>Có {count} kết quả</Text>
+                </View>
+
+                <Text style={styles.header}>GIẤY ĐĂNG KÝ XE</Text>
+                <Image style={styles.image}/>
+
+                <View style={{flexDirection:"row",marginTop:"20%",marginLeft:"7%"}}>
+                    <TouchableOpacity style={[styles.btn1,{alignItems:"center",justifyContent:"center"}]} onPress={()=> navigation.navigate("VPHC2")}>
+                        <Text style={{fontWeight:"bold"}}>TẠO BIÊN BẢN</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={[styles.btn1,{alignItems:"center"}]} onPress={()=> navigation.navigate("Reported")}>
+                        <Text style={{fontWeight:"bold"}}>TẠO ĐƠN</Text>
+                        <Text style={{fontWeight:"bold"}}>THÔNG BÁO</Text>
+                    </TouchableOpacity>
+                </View>
+
+                <TouchableOpacity style={[styles.btn1,{alignItems:"center",justifyContent:"center",marginTop:"10%",marginBottom:"40%"}]} onPress={()=> navigation.navigate("Judged")}>
+                        <Text style={{fontWeight:"bold"}}>TẠO QUYẾT ĐỊNH XỬ</Text>
+                        <Text style={{fontWeight:"bold"}}>PHẠT (KHÔNG BIÊN BẢN)</Text>
+                    </TouchableOpacity>
             </View>
-
-            <TouchableOpacity>
-                    <Text>TẠO QUYẾT ĐỊNH XỬ PHẠT (KHÔNG BIÊN BẢN)</Text>
-                </TouchableOpacity>
-        </SafeAreaView>
+        </ScrollView>
     )
 }

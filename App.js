@@ -3,9 +3,7 @@ import UserNavigator from "./Src/Navigation/UserNavigator";
 import PoliceNavigator from "./Src/Navigation/PoliceNavigator"
 import { View } from "react-native";
 import { styles } from "./styles";
-import SignUp from './Src/Screens/Authentication/signUp'
-import MainHome from "./Src/Screens/User/Home/MainHome";
-import Account from './Src/Screens/User/Account/index'
+import VPHC2 from "./Src/Screens/Police/Home/Form/VPHC2";
 
 export default function App() {
   return (

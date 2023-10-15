@@ -38,6 +38,9 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         height: 30,
         marginRight:"15%"
+    },
+    container:{
+        marginTop:"5%"
     }
 
 
