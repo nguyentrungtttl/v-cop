@@ -7,9 +7,10 @@ export const styles = StyleSheet.create({
     avatar:{
         width: 100,
         height: 55,
-
+        flex:0.35,
         top: "10%",
-        left:"38%"
+        left:"38%",
+        borderRadius:"50%"
     },
     userInfo:{
         top: "11%",
@@ -34,7 +35,7 @@ export const styles = StyleSheet.create({
     box:{
         borderTopWidth:1.5,
         borderTopColor:"#F3F4F6",
-        marginVertical: "2%",
+        marginBottom: "4%",
         marginHorizontal:"4%",
         top:"2%"
       }

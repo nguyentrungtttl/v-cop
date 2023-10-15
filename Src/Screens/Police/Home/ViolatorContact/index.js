@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { View, Button, Image, Text,SafeAreaView,TouchableOpacity, } from 'react-native';
+import { View, Button, Image, Text,SafeAreaView,TouchableOpacity,ScrollView } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import recognitionPlate from '../../../../API/recognition';
 import { styles } from './styles';
 
-export default function ViolatorContact() {
+export default function ViolatorContact({navigation}) {
   const [imageUri, setImageUri] = useState(null);
   const [plateNumber, setPlateNumber] = useState(null);
 
@@ -36,34 +36,44 @@ export default function ViolatorContact() {
     } catch (error) {
       console.error('Error recognizing plate:', error);
     }
+    navigation.navigate("ViolatorInf")
+
   };
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <ScrollView style={{ flex: 1, backgroundColor:"white" }}>
       <View style={{ flex: 1 }}>
 
-        <TouchableOpacity style={{alignItems:"center",marginTop:"5%"}} onPress={handleTakePhoto}>
-          <Image source={require("../../../../assets/Camera.png")} />
+        <TouchableOpacity style={{alignItems:"center",marginTop:"10%"}} onPress={handleTakePhoto}>
+          <Image style={{width:320,height:550}} source={require("../../../../assets/Camera.png")} />
         </TouchableOpacity>
 
-        <TouchableOpacity>
-          <Text>Tạo biên bản thủ công</Text>
-        </TouchableOpacity>
+
 
         {imageUri ? (
-          <View>
-            <Image source={{ uri: imageUri }} style={{ width: 200, height: 200 }} />
-            <Button title="Recognize Plate" onPress={handleRecognizePlate} />
+          <View style={{alignItems:"center",marginTop:"10%"}}>
+            <Image source={{ uri: imageUri }} style={{ width: 300, height: 200 }} />
+
+            <View style={{marginTop:"5%"}}>
+            <TouchableOpacity style={styles.btn} onPress={() => {navigation.navigate("VPHC")}}>
+              <Text>Tạo biên bản thủ công</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.btn} onPress={handleRecognizePlate}>
+              <Text>Tạo biên bản</Text>
+            </TouchableOpacity>
+            </View>
+
             <View>
               <Text style={{ fontSize: 30 }}>{plateNumber}</Text>
             </View>
           </View>
         ) : (
-          <View>
+          <View style={{alignItems:"center", marginTop:"2%"}}>
             <Text>No photo taken</Text>
           </View>
         )}
       </View>
-    </SafeAreaView>
+    </ScrollView>
   );
 }
