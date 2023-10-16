@@ -11,7 +11,7 @@ import Form from './Form';
 
 const Stack = createStackNavigator();
 
-export default function Home() {
+export default function Auths() {
   return (
       <Stack.Navigator initialRouteName="MainHome" screenOptions={{headerShown:false}}>
         <Stack.Screen name="MainHome" component={MainHome} />

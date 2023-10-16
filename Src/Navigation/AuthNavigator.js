@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Text, BottomNavigation } from "react-native-paper";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
-import Home from "../Screens/Authority/Home";
+import Auths from "../Screens/Authority";
 import Account from "../Screens/Authority/Account";
 import Form from "../Screens/Police/Home/Form";
 const Tab = createBottomTabNavigator();
@@ -61,7 +61,7 @@ export default function AuthNavigator() {
       >
         <Tab.Screen
           name="Home"
-          component={Home}
+          component={Auths}
           options={{
             tabBarLabel: "Trang chủ",
             tabBarIcon: ({ color, size }) => {
