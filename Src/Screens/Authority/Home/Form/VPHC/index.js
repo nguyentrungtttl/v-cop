@@ -1,31 +1,8 @@
-import {Text,View,TouchableOpacity,SafeAreaView} from 'react-native'
+import {View,SafeAreaView,TouchableOpacity,Text} from 'react-native'
+import React, {useState} from 'react'
 import {styles} from './style'
 
-export default function VPHC2({navigation}){
-    // Only for testing purpose
-    const reportId = "04"
-    const time = new Date()
-    const hour = time.getHours()
-    const minute = time.getMinutes()
-    const day = time.getDate()
-    const month = time.getMonth()+1
-    const year = time.getFullYear()
-    const city ="Đà Nẵng"
-    const district="Hải Châu"
-    const username= "Nguyễn Anh Huy"
-    const position = "Trung úy"
-    const organization = "Gia đình nhà ###"
-    const address = "12A Trần Đăng Ninh,quận Hải Châu, thành phố Đà Nẵng"
-    const job = "Giáo viên trường Skyline"
-    const id = "123456789"
-    const bornYear="1989"
-    const idDate = "15"
-    const idMonth= "01"
-    const idYear="1998"
-    const idCity = "Đà Nẵng"
-    const plateNum = "43A-037472"
-    const phoneNum = "0123456789"
-
+export default function VPHC({navigation}){
     return(
         <SafeAreaView>
             <View style={styles.leading}>
@@ -37,6 +14,7 @@ export default function VPHC2({navigation}){
                 </View>
             </View>
 
+            
             <Text style={styles.Bred}>BIÊN BẢN VI  PHẠM HÀNH CHÍNH</Text>
 
             <Text style={[styles.Bblack,{textAlign:"center"}]}>Trong lĩnh vực giao thông đường bộ, đường sắt</Text>
@@ -52,21 +30,22 @@ export default function VPHC2({navigation}){
 
             <Text style={{left:"2%",marginBottom:"2%"}}><Text style={styles.Bblack}>Ông(bà) tổ chức:</Text> {organization}</Text>
 
-            <Text style={{left:"2%",marginBottom:"2%"}}><Text style={styles.Bblack}>Địa chỉ:</Text> {address}</Text>
-
-            <View style={{flexDirection:"row"}}>
-                <Text style={{left:"2%",marginBottom:"2%"}}> <Text style={styles.Bblack}>Nghề nghiệp(lĩnh vực hoạt động):</Text> {job} </Text>
-                <Text > <Text style={styles.Bblack}>Năm sinh:</Text> {bornYear}</Text>
-            </View>
-
-            <Text style={{left:"2%",marginBottom:"2%"}}><Text style={styles.Bblack}>Số CMND hoặc hộ chiếu Quyết định thành lập hoặc ĐKKD:</Text> {id}</Text>
-
-            <Text style={{left:"2%",marginBottom:"2%"}}><Text style={styles.Bblack}>Ngày cấp:</Text>{idDate}/{idMonth}/{idYear} <Text style={styles.Bblack}>Nơi cấp:</Text>{idCity}</Text>
             <Text style={{left:"2%",marginBottom:"2%"}}><Text style={styles.Bblack}>Chủ sỡ hữu phương tiện:</Text> {plateNum}</Text>
+
             <Text style={{left:"2%",marginBottom:"2%"}}><Text style={styles.Bblack}>Số điện thoại liên lạc:</Text> {phoneNum}</Text>
 
             <View style={{marginVertical:"5%"}}>
                 <Text style={styles.Bblack}>Đã có hành vi vi phạm hành chính</Text>
+            </View>
+
+            <View style={{marginHorizontal:"5%",marginTop:"7%"}}>
+                <Text style={styles.Bblack}>Đề nghị</Text>
+                <Text>ông/bà trong vòng 10 ngày làm việc(kể từ thời điểm nhận được quyết định xử phạt)</Text>
+                <Text>, tiến hành nộp tiền phạt vi phạm hành chính</Text>
+            </View>
+
+            <View>
+                <Text style={styles.Bblack}>Số tiền phải nộp:</Text>
             </View>
 
             <View style={{flexDirection:"row", left:"1%"}}>
@@ -85,8 +64,8 @@ export default function VPHC2({navigation}){
                 </View>
             </View>
 
-            <TouchableOpacity style={styles.btn} onPress={()=>navigation.navigate("Done")}>
-                <Text style={styles.black}>Thông báo cho người vi phạm</Text>
+            <TouchableOpacity style={styles.btn} onPress={()=>navigation.navigate("Judged")}>
+                <Text style={styles.black}>RA QUYẾT ĐỊNH XỬ PHẠT</Text>
             </TouchableOpacity>
         </SafeAreaView>
     )
