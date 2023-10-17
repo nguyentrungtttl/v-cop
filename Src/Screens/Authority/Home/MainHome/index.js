@@ -1,6 +1,6 @@
 import { View, Text, FlatList, ScrollView,TouchableOpacity} from 'react-native'
 import React,{useState} from 'react'
-import { styles } from './styles'
+import { styles } from './style'
 import { Button } from 'react-native-paper'
 import { Image } from 'react-native'
 import TaskBtn from './components/button'
@@ -43,8 +43,11 @@ export default function MainHome({navigation}) {
       <View style={styles.container}>
         <View>
           <Text style={styles.leading}>Tính năng người dùng</Text>
-          <TaskBtn title="Thông báo" title2="vi phạm" source={require('./components/workOnline.png')} onPress={()=>navigation.navigate("Evidence")} />
+          <TaskBtn title="Ra quyết định" title2 = "xử phạt" source={require('./components/judged.png')} onPress={()=>navigation.navigate("Form")} />
+          <TaskBtn title="Làm việc" source={require('./components/workOnline.png')} onPress={()=>navigation.navigate("Evidence")} />
         </View>
+
+        
 
         <View>
           <View style={{flexDirection:"row",top:"14%"}}>
