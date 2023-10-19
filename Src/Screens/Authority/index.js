@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import { styles } from './styles'
+
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import MainHome from './MainHome';
-import Notification from './Notification';
-import Form from './Form';
+import MainHome from '../Authority/Home/MainHome';
+import Notification from '../Authority/Home/Notification';
+import Form from '../Authority/Home/Form';
 
 
 const Stack = createStackNavigator();
