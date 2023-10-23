@@ -22,6 +22,7 @@ export default function App() {
 
   // }
   // else if(isLogged){}
+
   return (
     <View style={styles.container}>
       <PaperProvider>

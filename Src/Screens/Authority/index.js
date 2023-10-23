@@ -9,6 +9,7 @@ import Form from './Home/Form';
 import VideoCall from './Home/VideoCall';
 
 
+
 const Stack = createStackNavigator();
 
 export default function Auths() {

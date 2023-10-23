@@ -18,6 +18,7 @@ const style = StyleSheet.create({
     button:{
         width: 320,
         height: 170,
+
         flexDirection:"row",
         backgroundColor:"#F0F8FF",
         borderRadius: 8,
@@ -30,6 +31,7 @@ const style = StyleSheet.create({
         alignItems:"center",
         justifyContent:"center",
         marginBottom:"3%"
+
     },
     source:{
         width: 100,
