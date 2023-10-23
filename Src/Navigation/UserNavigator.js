@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet ,Image  } from "react-native";
+import { View, StyleSheet, Image } from "react-native";
 import { NavigationContainer, CommonActions } from "@react-navigation/native"; // Import NavigationContainer
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Text, BottomNavigation } from "react-native-paper";
@@ -13,90 +13,86 @@ const Tab = createBottomTabNavigator();
 
 export default function UserNavigator() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}
-        tabBar={({ navigation, state, descriptors, insets }) => (
-          <BottomNavigation.Bar
-            navigationState={state}
-            safeAreaInsets={insets}
-            onTabPress={({ route, preventDefault }) => {
-              const event = navigation.emit({
-                type: "tabPress",
-                target: route.key,
-                canPreventDefault: true,
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+      tabBar={({ navigation, state, descriptors, insets }) => (
+        <BottomNavigation.Bar
+          navigationState={state}
+          safeAreaInsets={insets}
+          onTabPress={({ route, preventDefault }) => {
+            const event = navigation.emit({
+              type: "tabPress",
+              target: route.key,
+              canPreventDefault: true,
+            });
+
+            if (event.defaultPrevented) {
+              preventDefault();
+            } else {
+              navigation.dispatch({
+                ...CommonActions.navigate(route.name, route.params),
+                target: state.key,
               });
+            }
+          }}
+          renderIcon={({ route, focused, color }) => {
+            const { options } = descriptors[route.key];
+            if (options.tabBarIcon) {
+              return options.tabBarIcon({ focused, color, size: 24 });
+            }
 
-              if (event.defaultPrevented) {
-                preventDefault();
-              } else {
-                navigation.dispatch({
-                  ...CommonActions.navigate(route.name, route.params),
-                  target: state.key,
-                });
-              }
-            }}
-            renderIcon={({ route, focused, color }) => {
-              const { options } = descriptors[route.key];
-              if (options.tabBarIcon) {
-                return options.tabBarIcon({ focused, color, size: 24 });
-              }
+            return null;
+          }}
+          getLabelText={({ route }) => {
+            const { options } = descriptors[route.key];
+            const label =
+              options.tabBarLabel !== undefined
+                ? options.tabBarLabel
+                : options.title !== undefined
+                ? options.title
+                : route.title;
 
-              return null;
-            }}
-            getLabelText={({ route }) => {
-              const { options } = descriptors[route.key];
-              const label =
-                options.tabBarLabel !== undefined
-                  ? options.tabBarLabel
-                  : options.title !== undefined
-                  ? options.title
-                  : route.title;
-
-              return label;
-            }}
-          />
-        )}
-      >
-        <Tab.Screen
-          name="Home"
-          component={Home}
-          options={{
-            headerShown: false,
-            tabBarLabel: "Trang chủ",
-            tabBarIcon: ({ color, size }) => {
-              return <Icon name="home" size={size} color={color} />;
-            },
+            return label;
           }}
         />
-         <Tab.Screen
-          name="EWallet"
-          component={EWallet}
-          options={{
-            headerShown: false,
-            tabBarLabel: "Ví điện tử",
-            tabBarIcon: () => {
-              return <Image source={require('../assets/card.png')}/>;
-            },
-          }}
-        />
-        <Tab.Screen
-          name="Function"
-          component={Function}
-          options={{
-            headerShown: false,
-            tabBarLabel: "Tài khoản",
-            tabBarIcon: ({size,color}) => {
-              return <Icon name="cog" size={size} color={color} />;
-            },
-          }}
-        />
-
-
-      </Tab.Navigator>
-    </NavigationContainer>
+      )}
+    >
+      <Tab.Screen
+        name="Home"
+        component={Home}
+        options={{
+          headerShown: false,
+          tabBarLabel: "Trang chủ",
+          tabBarIcon: ({ color, size }) => {
+            return <Icon name="home" size={size} color={color} />;
+          },
+        }}
+      />
+      <Tab.Screen
+        name="EWallet"
+        component={EWallet}
+        options={{
+          headerShown: false,
+          tabBarLabel: "Ví điện tử",
+          tabBarIcon: () => {
+            return <Image source={require("../assets/card.png")} />;
+          },
+        }}
+      />
+      <Tab.Screen
+        name="Function"
+        component={Function}
+        options={{
+          headerShown: false,
+          tabBarLabel: "Tài khoản",
+          tabBarIcon: ({ size, color }) => {
+            return <Icon name="cog" size={size} color={color} />;
+          },
+        }}
+      />
+    </Tab.Navigator>
   );
 }
 
