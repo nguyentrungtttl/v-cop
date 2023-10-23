@@ -15,7 +15,7 @@ export const handleLogin = async (id, password) => {
   }
 };
 
-export const handleSignUp = async ({ id, password, username, phoneNum,job="undefined",birthdate="00/00/0000", position="user" }) => {
+export const handleSignUp = async ({position="user", id, password, username, phoneNum,job="undefined",birthdate="00/00/0000" }) => {
     try {
       const response = await createUserWithEmailAndPassword(FIREBASE_AUTH, `${id}@gmail.com`, password);
       console.log(response);

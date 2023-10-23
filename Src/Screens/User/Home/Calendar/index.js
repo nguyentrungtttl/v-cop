@@ -1,24 +1,21 @@
 import {View,Text,TouchableOpacity,StyleSheet,Image,SafeAreaView, FlatList} from 'react-native'
 import React,{useState} from 'react';
 import {Calendar} from 'react-native-calendars';
-import CheckBox from 'react-native-check-box'
+import Checkbox from './components/CheckBox';
 
 export default function SetAppointment(){
+    const [is1,set1] = useState(false)
+    const [is2,set2] = useState(false)
+    const [is3,set3] = useState(false)
+    const [is4,set4] = useState(false)
+    const [is5,set5] = useState(false)
+
     const [daySelect,setDaySelect] = useState("")
     const [modal,setModal] =useState(false)
     var MaDate = new Date();
     var MyDate = new Date()
     var MaxDate;
     var MinDate
-    const [isChecked, setSelection] = useState(false);
-
-    const possibleDay = [
-        {time: "08:15"},
-        {time: "09:45"},
-        {time: "10:15"},
-        {time: "10:30"},
-        {time: "11:00"}
-    ]
 
     MaDate.setDate(MaDate.getDate()+20);
 
@@ -38,37 +35,15 @@ export default function SetAppointment(){
             maxDate={MaxDate}/>
 
             <View>
-                <Text style={{fontSize: 17,fontWeight:"bold",marginTop:"5%"}}>Chọn giờ</Text>
-                <View style={{flexDirection:"row",backgroundColor:"grey",justifyContent:"space-around",paddingVertical:"4%",marginTop:"5%",top:"1%"}}>
-                    <CheckBox color='black' onClick={()=>console.log("Clicked")}/>
-                    <Text style={{top:"1%",fontSize:14,fontWeight:"bold"}}>08:15</Text>
-                    <Text style={{top:"1%",fontSize:14,fontWeight:"bold"}}>{daySelect}</Text>
-                </View>
-
-                <View style={{flexDirection:"row",backgroundColor:"grey",justifyContent:"space-around",paddingVertical:"4%"}}>
-                    <CheckBox color='black' onClick={()=>console.log("Clicked")}/>
-                    <Text style={{top:"1%",fontSize:14,fontWeight:"bold"}}>09:45</Text>
-                    <Text style={{top:"1%",fontSize:14,fontWeight:"bold"}}>{daySelect}</Text>
-                </View>
-
-                <View style={{flexDirection:"row",backgroundColor:"grey",justifyContent:"space-around",paddingVertical:"4%"}}>
-                    <CheckBox color='black' onClick={()=>console.log("Clicked")}/>
-                    <Text style={{top:"1%",fontSize:14,fontWeight:"bold"}}>10:15</Text>
-                    <Text style={{top:"1%",fontSize:14,fontWeight:"bold"}}>{daySelect}</Text>
-                </View>
-
-                <View style={{flexDirection:"row",backgroundColor:"grey",justifyContent:"space-around",paddingVertical:"4%"}}>
-                    <CheckBox color='black' onClick={()=>console.log("Clicked")}/>
-                    <Text style={{top:"1%",fontSize:14,fontWeight:"bold"}}>10:30</Text>
-                    <Text style={{top:"1%",fontSize:14,fontWeight:"bold"}}>{daySelect}</Text>
-                </View>
-
-                <View style={{flexDirection:"row",backgroundColor:"grey",justifyContent:"space-around",paddingVertical:"4%",top:"-1%"}}>
-                    <CheckBox color='black' onClick={()=>console.log("Clicked")}/>
-                    <Text style={{top:"1%",fontSize:14,fontWeight:"bold"}}>11:00</Text>
-                    <Text style={{top:"1%",fontSize:14,fontWeight:"bold"}}>{daySelect}</Text>
+                <View>
+                        <Checkbox onPress={()=>set1(!is1)}
+                        isChecked={is1}
+                        />
+                        <Text>08:15</Text>
+                        <Text>{daySelect}</Text>
                 </View>
             </View>
+
         </SafeAreaView>
     )
 }

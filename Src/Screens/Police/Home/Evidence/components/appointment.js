@@ -19,7 +19,7 @@ export default function Meeting({violator,onPress}){
                 <Text>Cán bộ phụ trách</Text>
                 <Text style={styles.black}>{violator.name}</Text>
                 <Text style={styles.black}>{faultDate}</Text>
-                <TouchableOpacity style={styles.bluebtn}>
+                <TouchableOpacity style={styles.bluebtn} onPress={onPress}>
                     <Text style={styles.white}>LÀM VIỆC</Text>
                 </TouchableOpacity>
             </View>
