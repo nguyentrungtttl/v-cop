@@ -3,16 +3,19 @@ import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native'
 import styles from './style'
 import { handleLogin } from '../../API/authentication'
 import {doc,getDoc} from "firebase/firestore/lite"
-
+import UserNavigator from '../../Navigation/UserNavigator'
 
 const Login =({navigation}) =>{
   const [username,setUsername] = useState('')
   const [id,setId] =useState('')
-  const [passWord,setPassWord] = useState('')
+  const [password,setPassWord] = useState('')
   const [isLogged,setIsLogged] = useState(false)
   const handleLoginFunc = async() =>{
-    const a = await handleLogin({id,passWord})
-    console.log(a)
+   
+    const position = await handleLogin({id,password})
+    console.log(position)
+    if (position === 'user') navigation.navigate('UserNavigator')
+    if (position === 'police') navigation.navigate('PoliceNavigator')
   }
 
   return(
@@ -25,7 +28,7 @@ const Login =({navigation}) =>{
         <Text style={styles.lead}>───────── Đăng nhập ─────────</Text>
         <TextInput style={styles.textInput} placeholder="Họ và tên" onChangeText={text => setUsername(text)} value={username}/>
         <TextInput style={styles.textInput} placeholder="Căn cước công dân" onChangeText={id => setId(id)} value={id} />
-        <TextInput style={styles.textInput}  placeholder='Mật khẩu' onChangeText={PW => setPassWord(PW)} value={passWord}  />
+        <TextInput style={styles.textInput}  placeholder='Mật khẩu' onChangeText={PW => setPassWord(PW)} value={password}  />
         <TouchableOpacity style={styles.btn} 
           onPress={()=>{handleLoginFunc()}}>
           <Text style={styles.boldWhite}>ĐĂNG NHẬP</Text>

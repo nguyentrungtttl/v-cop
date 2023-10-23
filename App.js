@@ -1,35 +1,80 @@
-import { PaperProvider } from "react-native-paper";
-import UserNavigator from "./Src/Navigation/UserNavigator";
-import PoliceNavigator from "./Src/Navigation/PoliceNavigator"
-import AuthNavigator from "./Src/Navigation/AuthNavigator";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { Provider as PaperProvider } from "react-native-paper";
+import React from "react";
 import { View } from "react-native";
 import { styles } from "./styles";
-import React,{useState} from 'react'
-import UserCollection from "./Src/Screens/Authentication/routes";
-// import VPHC2 from "./Src/Screens/Police/Home/Form/VPHC2";
-// import Paid from "./Src/Screens/User/Account/screen/Form";
-// import Judged from "./Src/Screens/Authority/Home/Form/Judged";
-// import ViolatorInf from "./Src/Screens/Police/Home/Form/ViolatorInf";
-// import Reported from "./Src/Screens/Police/Home/Form/Reported";
-// import Notification from "./Src/Screens/User/Home/Notification";
-// import SetAppointment from "./Src/Screens/User/Home/Calendar";
+
+// Import your screens and navigators here
+import Login from "./Src/Screens/Authentication/login";
+import SignUp from "./Src/Screens/Authentication/signUp";
+import UserNavigator from "./Src/Navigation/UserNavigator";
+import PoliceNavigator from "./Src/Navigation/PoliceNavigator";
+
+const Stack = createStackNavigator();
+
 export default function App() {
-  const [isLogged,setIsLogged] = useState(false)
-  // if (!isLogged){
-  //   return(
-  //     <UserCollection/>
-  //   )
-
-  // }
-  // else if(isLogged){}
-
+  //user --> id: 1, username: ken
+  //police -->id: 2, username: police
+  //authority --> id: 3, username: authority 
   return (
     <View style={styles.container}>
       <PaperProvider>
-        <UserNavigator />
-        {/* <PoliceNavigator /> */}
-        {/* <AuthNavigator/> */}
+        <NavigationContainer
+          screenOptions={{
+            headerShown: false,
+          }}
+        >
+          <Stack.Navigator>
+            <Stack.Screen
+              name="Login"
+              component={Login}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="SignUp"
+              component={SignUp}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="UserNavigator"
+              component={UserNavigator}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="PoliceNavigator"
+              component={PoliceNavigator}
+              options={{ headerShown: false }}
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
       </PaperProvider>
     </View>
   );
 }
+
+// import { PaperProvider } from "react-native-paper";
+// import UserNavigator from "./Src/Navigation/UserNavigator";
+// import PoliceNavigator from "./Src/Navigation/PoliceNavigator"
+// import AuthNavigator from "./Src/Navigation/AuthNavigator";
+// import { View } from "react-native";
+// import { styles } from "./styles";
+// import React,{useState} from 'react'
+// import UserCollection from "./Src/Screens/Authentication/routes";
+// import Login from "./Src/Screens/Authentication/login";
+// import SignUp from "./Src/Screens/Authentication/signUp";
+
+// export default function App() {
+//   return (
+//     <View style={styles.container}>
+//       <PaperProvider>
+//         {/* <PoliceNavigator /> */}
+//         {/* <UserCollection />   */}
+//         <Login />
+//         {/* <SignUp />   */}
+//         {/* <UserNavigator /> */}
+//         {/* <AuthNavigator/> */}
+//       </PaperProvider>
+//     </View>
+//   );
+// }
