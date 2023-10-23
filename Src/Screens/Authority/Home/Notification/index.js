@@ -5,7 +5,7 @@ import Judged from './components/judged'
 
 
 
-export default function Evidence({navigation}) {
+export default function Notification({navigation}) {
   const count = 0
   const data= [
     {plateNum:"43E-123456", credit: "Nguyễn Duy", id:1},
