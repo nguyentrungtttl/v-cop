@@ -16,7 +16,7 @@ const SignUp =({navigation}) =>{
   return(
     <View style={styles.container}>
 
-      <Image style={styles.logo}source={require('../../assets/vCop.png')} />
+      <Image style={styles.logo}source={require('../../assets/vcop.png')} />
 
 
       <View>
