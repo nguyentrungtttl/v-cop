@@ -1,6 +1,8 @@
 import {View,Text,TouchableOpacity,SafeAreaView} from 'react-native'
 import {useState} from 'react'
 import {styles} from './style'
+import {Picker} from '@react-native-picker/picker'
+import { SelectList } from 'react-native-dropdown-select-list'
 
 export default function Reported({navigation}){
     // Only for testing purpose
@@ -13,6 +15,14 @@ export default function Reported({navigation}){
     const month = time.getMonth()+1
     const year = time.getFullYear()
     const geoLocation = "đường 2/9"
+    const [fault,setFault] = useState()
+    const data = [
+        {key:'1', value:'Đậu xe sai quy định'},
+        {key:'2', value:'Không đội mũ bảo hiểm'},
+        {key:'3', value:'Uống rượu bia khi lái xe'},
+        {key:'4', value:'Vượt đèn đỏ'},
+        {key:'5', value:'Bắn tốc độ'},
+    ]
     return(
         <SafeAreaView>
             <View style={styles.leading}>
@@ -29,6 +39,12 @@ export default function Reported({navigation}){
 
             <View>
                 <Text style={[styles.Bblack,{textAlign:"left",marginLeft:"5%",marginTop:"15%"}]}>Được phát hiện vi phạm lỗi</Text>
+                <SelectList
+                
+                setSelected={(val)=>setFault(val)}
+                data={data}
+                save='value'/>
+                
             </View>
 
             <View style={{flexDirection:"row",marginTop:"7%"}}>

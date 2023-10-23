@@ -41,6 +41,7 @@ export const styles = StyleSheet.create({
         paddingLeft:"4%"
     },
     image:{
-        alignItems:"center"
+        alignItems:"center",
+        left:"25%"
     }
 })

@@ -2,7 +2,7 @@ import {View,Text, TouchableOpacity} from 'react-native'
 import React from 'react'
 import {styles} from './styles'
 
-export default function Meeting({violator}){
+export default function Meeting({violator,onPress}){
     // Only for testing purpose
     const district="Hải Châu"
     const city="Đà Nẵng"

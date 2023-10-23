@@ -3,7 +3,7 @@ import React from 'react'
 import { styles } from './styles'
 import SettingBtn from './components/settingBtn'
 
-export default function Account() {
+export default function Account({navigation}) {
   return (
     <View style={styles.container}>
       <Image style ={styles.avatar} source={require('./components/icon/avatar.jpg')} />
@@ -14,7 +14,7 @@ export default function Account() {
       </View>
 
       <View style={{top:"10%",left:"4%"}}>
-        <SettingBtn title="Khai báo thông tin phương tiện" src={require('./components/icon/privateInfo.png')} />
+        <SettingBtn title="Khai báo thông tin phương tiện" src={require('./components/icon/privateInfo.png')} onPress={()=>navigation.navigate('VehicleInfo')}/>
         <SettingBtn title="Lịch sử liên lạc" src={require('./components/icon/history.png')} />
         <View style={styles.box}></View>
 

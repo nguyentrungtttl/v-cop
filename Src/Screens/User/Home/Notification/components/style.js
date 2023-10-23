@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native'
 
 const styles = StyleSheet.create({
     box:{
-        backgroundColor:"#d6d2d2",
+        backgroundColor:"#F7F8F9",
         borderRadius: 8,
         marginHorizontal:"10%",
         flexDirection:"row",

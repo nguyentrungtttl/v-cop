@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import { styles } from './styles'
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import MainHome from './MainHome';
-import Notification from './Notification';
-import Form from './Form';
+import MainHome from './Home/MainHome';
+import Evidence from './Home/Evidence';
+import Form from './Home/Form';
+import VideoCall from './Home/VideoCall';
 
 
 const Stack = createStackNavigator();
@@ -15,8 +15,9 @@ export default function Auths() {
   return (
       <Stack.Navigator initialRouteName="MainHome" screenOptions={{headerShown:false}}>
         <Stack.Screen name="MainHome" component={MainHome} />
-        <Stack.Screen name="Notification" component={Notification} />
+        <Stack.Screen name="Evidence" component={Evidence} />
         <Stack.Screen name="Form" component={Form} />
+        <Stack.Screen name="VideoCall" component={VideoCall} />
       </Stack.Navigator>
   )
 }

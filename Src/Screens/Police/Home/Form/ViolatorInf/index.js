@@ -23,10 +23,10 @@ export default function ViolatorInf({navigation}){
                 
 
                 <Text style={styles.header}>HỒ SƠ ĐĂNG KIỂM</Text>
-                <Image style={styles.image} />
+                <Image source={require('../../../../../assets/regis.png')} style={styles.image} />
 
                 <Text style={styles.header}>BẰNG LÁI XE</Text>
-                <Image style={styles.image} />
+                <Image source={require('../../../../../assets/license.png')} style={styles.image} />
 
 
                 <View>
@@ -35,7 +35,7 @@ export default function ViolatorInf({navigation}){
                 </View>
 
                 <Text style={styles.header}>GIẤY ĐĂNG KÝ XE</Text>
-                <Image style={styles.image}/>
+                <Image  style={styles.image} source={require('../../../../../assets/regisitration.png')}/>
 
                 <View style={{flexDirection:"row",marginTop:"20%",marginLeft:"7%"}}>
                     <TouchableOpacity style={[styles.btn1,{alignItems:"center",justifyContent:"center"}]} onPress={()=> navigation.navigate("VPHC2")}>

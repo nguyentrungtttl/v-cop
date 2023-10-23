@@ -11,6 +11,8 @@ import Notification from './Notification';
 import SignUp from '../../Authentication/signUp';
 import Login from '../../Authentication/login'
 import Account from '../Account';
+import SetAppointment from './Calendar';
+import Paid from './Form';
 
 
 const Stack = createStackNavigator();
@@ -25,9 +27,13 @@ export default function Home() {
         <Stack.Screen name="MainHome" component={MainHome} />
         <Stack.Screen name="Account" component={Account}/>
         <Stack.Screen name="EWallet" component={EWallet} />
+        <Stack.Screen name='Calendar' component={SetAppointment}/>
+        {/* <Stack.Screen name='Login' component={Login}/> */}
         {/* Hướng phát triển */}
         {/* <Stack.Screen name="Report" component={Report} /> */}
         <Stack.Screen name="Notification" component={Notification} />
+        <Stack.Screen name="Paid" component={Paid} />
+       
       </Stack.Navigator>
   )
 }

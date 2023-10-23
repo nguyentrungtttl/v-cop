@@ -8,25 +8,25 @@ import Sanction from './components/sanction'
 
 
 export default function Notification({navigation}) {
-  const count = 0
+  const count = 2
   const data= [
     {
-      name: "Banh mi trung",
+      name: "Nguyễn Văn A",
       type: "active",
       id: 1
     },
     {
-      name: "Banh mi trung",
+      name: "Nguyễn Văn A",
       type: "passive",
       id: 2
     },
     {
-      name: "Banh mi trung",
+      name: "Nguyễn Văn A",
       type: "active",
       id: 3
     },
     {
-      name: "Banh mi trung",
+      name: "Nguyễn Văn A",
       type: "passive",
       id: 4
     }
@@ -36,14 +36,14 @@ export default function Notification({navigation}) {
     if (item.type=="active"){
       return(
         <View>
-          <Sanction policename={item}/>
+          <Sanction policename={item} onPress={()=>{navigation.navigate("Paid")}}/>
         </View>
       )
     }
     else if (item.type=="passive"){
       return(
         <View>
-          <Fault policename={item}/>
+          <Fault policename={item} onPress={()=>{navigation.navigate("Calendar")}}/>
         </View>
       )
     }
