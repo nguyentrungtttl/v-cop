@@ -17,7 +17,8 @@ export default function TaskBtn({onPress,source,title,title2}){
 const style = StyleSheet.create({
     button:{
         width: 320,
-        height: 150,
+        height: 170,
+
         flexDirection:"row",
         backgroundColor:"#F0F8FF",
         borderRadius: 8,
@@ -29,7 +30,8 @@ const style = StyleSheet.create({
         shadowRadius: 3,
         alignItems:"center",
         justifyContent:"center",
-        marginTop:"3%"
+        marginBottom:"3%"
+
     },
     source:{
         width: 100,

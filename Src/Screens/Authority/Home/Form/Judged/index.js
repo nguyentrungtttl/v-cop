@@ -30,8 +30,8 @@ export default function Judged({navigation}){
     const geoLocation = "12A Trần Đăng Ninh"
     const fine = "250.000VNĐ"
     return(
-        <ScrollView style={{flex:2}}>
-            <View style={{marginTop:"20%"}}>
+        <ScrollView>
+            <View style={{marginTop:"20%",marginHorizontal:"2%"}}>
             
                 <View style={styles.leading}>
                     <Text>Số:{judgeId}QĐ-XPVPHC</Text>
@@ -46,7 +46,7 @@ export default function Judged({navigation}){
                 <Text style={styles.Bred}>QUYẾT ĐỊNH XỬ PHẠT VI PHẠM HÀNH CHÍNH</Text>
                 <Text style={styles.Bblack}>Trong lĩnh vực giao thông đường bộ</Text>
 
-                <View style={{marginLeft:"6%",marginTop:"10%"}}>
+                <View style={{marginTop:"10%"}}>
                     <Text>Căn cứ Điều {rule} Luật xử lý vi phạm hành chính</Text>
                     <Text>Căn cứ nghị định số {rule2} của Chính phủ quy định xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ: {title} </Text>
                     <Text>Căn cứ Biên bản vi phạm hành chính số: ...../BB-VPHC do... lập hồi .../... ngày ... tháng ... năm ... tại ...</Text>

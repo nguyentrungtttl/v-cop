@@ -4,6 +4,7 @@ import { FIRESTORE_DB } from '../../firebaseConfig';
 import { collection, doc, setDoc } from 'firebase/firestore';
 
 export const handleLogin = async (id, password) => {
+  
   try {
     const response = await signInWithEmailAndPassword(FIREBASE_AUTH, `${id}@gmail.com`, password);
     console.log(response);
@@ -14,7 +15,7 @@ export const handleLogin = async (id, password) => {
   }
 };
 
-export const handleSignUp = async ({ id, password, username, phoneNum }) => {
+export const handleSignUp = async ({ id, password, username, phoneNum,job="undefined",birthdate="00/00/0000" }) => {
     try {
       const response = await createUserWithEmailAndPassword(FIREBASE_AUTH, `${id}@gmail.com`, password);
       console.log(response);
@@ -27,6 +28,8 @@ export const handleSignUp = async ({ id, password, username, phoneNum }) => {
           name: username,
           id: id,
           phoneNumber: phoneNum,
+          job: job,
+          birthdate: birthdate,
         });
         console.log('User information successfully added to Firestore');
       } else {

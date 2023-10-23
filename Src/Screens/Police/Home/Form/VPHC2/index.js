@@ -27,7 +27,7 @@ export default function VPHC2({navigation}){
     const phoneNum = "0123456789"
 
     return(
-        <SafeAreaView>
+        <SafeAreaView style={{marginTop:"15%",marginHorizontal:"1%"}}>
             <View style={styles.leading}>
                 <Text style={{top:"2%"}}>Số:{reportId}BB-VPHC</Text>
 
@@ -54,9 +54,9 @@ export default function VPHC2({navigation}){
 
             <Text style={{left:"2%",marginBottom:"2%"}}><Text style={styles.Bblack}>Địa chỉ:</Text> {address}</Text>
 
-            <View style={{flexDirection:"row"}}>
+            <View>
                 <Text style={{left:"2%",marginBottom:"2%"}}> <Text style={styles.Bblack}>Nghề nghiệp(lĩnh vực hoạt động):</Text> {job} </Text>
-                <Text > <Text style={styles.Bblack}>Năm sinh:</Text> {bornYear}</Text>
+                <Text style={{left:"2%",marginBottom:"2%"}}> <Text style={styles.Bblack}>Năm sinh:</Text> {bornYear}</Text>
             </View>
 
             <Text style={{left:"2%",marginBottom:"2%"}}><Text style={styles.Bblack}>Số CMND hoặc hộ chiếu Quyết định thành lập hoặc ĐKKD:</Text> {id}</Text>

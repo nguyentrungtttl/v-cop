@@ -8,7 +8,7 @@ import Evidence from './Evidence';
 import Form from './Form';
 import FormHandle from './FormHandle';
 import ViolatorContact from './ViolatorContact';
-import Account from '../Account';
+import VideoCall from './VideoCall';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +20,7 @@ export default function Home() {
         <Stack.Screen name="Form" component={Form} />
         <Stack.Screen name="FormHandle" component={FormHandle} />
         <Stack.Screen name="ViolatorContact" component={ViolatorContact} />
+        <Stack.Screen name="VideoCall" component={VideoCall} />
       </Stack.Navigator>
   )
 }

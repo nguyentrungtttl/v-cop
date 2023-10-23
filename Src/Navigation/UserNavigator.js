@@ -8,6 +8,7 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import Home from "../Screens/User/Home";
 import Account from "../Screens/User/Account";
 import EWallet from "../Screens/User/Home/EWallet/index";
+import Function from "../Screens/User/Account/screen";
 const Tab = createBottomTabNavigator();
 
 export default function UserNavigator() {
@@ -82,8 +83,8 @@ export default function UserNavigator() {
           }}
         />
         <Tab.Screen
-          name="Account"
-          component={Account}
+          name="Function"
+          component={Function}
           options={{
             headerShown: false,
             tabBarLabel: "Tài khoản",

@@ -2,7 +2,7 @@ import {View,Text, TouchableOpacity} from 'react-native'
 import React from 'react'
 import {styles} from './style'
 
-export default function Sanction({policename}){
+export default function Sanction({policename,onPress}){
     // Only for testing purpose
     const district="Hải Châu"
     const city="Đà Nẵng"
@@ -19,7 +19,7 @@ export default function Sanction({policename}){
                 <Text>Cán bộ phụ trách</Text>
                 <Text style={styles.black}>{policename.name}</Text>
                 <Text style={styles.black}>{faultDate}</Text>
-                <TouchableOpacity style={styles.bluebtn}>
+                <TouchableOpacity style={styles.bluebtn} onPress={onPress}>
                     <Text style={styles.white}>NỘP PHẠT</Text>
                 </TouchableOpacity>
             </View>

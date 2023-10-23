@@ -4,17 +4,25 @@ import PoliceNavigator from "./Src/Navigation/PoliceNavigator"
 import AuthNavigator from "./Src/Navigation/AuthNavigator";
 import { View } from "react-native";
 import { styles } from "./styles";
-import VPHC2 from "./Src/Screens/Police/Home/Form/VPHC2";
-import Sign from "./Src/Screens/User/Account/screen/Sign";
-
+import React,{useState} from 'react'
+import UserCollection from "./Src/Screens/Authentication/routes";
+// import VPHC2 from "./Src/Screens/Police/Home/Form/VPHC2";
+// import Paid from "./Src/Screens/User/Account/screen/Form";
+// import Judged from "./Src/Screens/Authority/Home/Form/Judged";
+// import ViolatorInf from "./Src/Screens/Police/Home/Form/ViolatorInf";
+// import Reported from "./Src/Screens/Police/Home/Form/Reported";
+// import Notification from "./Src/Screens/User/Home/Notification";
+// import SetAppointment from "./Src/Screens/User/Home/Calendar";
 export default function App() {
-  // if(1){
+  const [isLogged,setIsLogged] = useState(false)
+  // if (!isLogged){
   //   return(
-  //     <View>
-  //       <Sign/>
-  //     </View>
+  //     <UserCollection/>
   //   )
+
   // }
+  // else if(isLogged){}
+
   return (
     <View style={styles.container}>
       <PaperProvider>
