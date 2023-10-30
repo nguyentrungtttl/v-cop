@@ -1,7 +1,7 @@
 import {Text,View,TouchableOpacity,SafeAreaView, ScrollView} from 'react-native'
 import {styles} from './style'
 
-export default function VPHC2({navigation}){
+export default function VPHC3({navigation}){
     // Only for testing purpose
     const reportId = "04"
     const time = new Date()
@@ -26,11 +26,18 @@ export default function VPHC2({navigation}){
     const plateNum = "43A-037472"
     const phoneNum = "0123456789"
 
+
+    const pressHandler = ()=>{
+        // Testing
+        navigation.navigate("ViolatorContact")
+        //Testting
+    }
+
     return(
         <ScrollView style={{marginTop:"15%",marginHorizontal:"1%"}}>
             <View style={{alignItems:"center"}}>
-                <TouchableOpacity style={{flexDirection:"row",right:"15%",}} onPress={()=>navigation.navigate("ViolatorInf")}>
-                    <Image source={require("../../../../assets/arrow.png")}/>
+                <TouchableOpacity style={{flexDirection:"row",right:"15%",}} onPress={pressHandler}>
+                    <Image source={require("../../../../../assets/arrow.png")}/>
                 </TouchableOpacity>
             </View>
             <View style={styles.leading}>

@@ -8,11 +8,11 @@ export default function ViolatorInf({navigation}){
     const address = "12A Trần Đăng Ninh"
     const [count,setCount] = useState(0)
     return(
-        <ScrollView>
+        <ScrollView style={{backgroundColor:"white"}}>
             <View>
-                <View style={{flexDirection:"row",marginTop:"20%"}}>
-                    <TouchableOpacity style={{flexDirection:"row",right:"15%",}} onPress={()=>navigation.navigate("ViolatorContact")}>
-                        <Image source={require("../../../../assets/arrow.png")}/>
+                <View style={{flexDirection:"row",marginTop:"20%",alignItems:"center"}}>
+                    <TouchableOpacity style={{flexDirection:"row"}} onPress={()=>navigation.navigate("ViolatorContact")}>
+                        <Image source={require("../../../../../assets/arrow.png")}/>
                     </TouchableOpacity>
                     <Text style={styles.header}>THÔNG TIN CHỦ XE</Text>
                 </View>

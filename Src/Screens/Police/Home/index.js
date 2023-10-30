@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import MainHome from './MainHome';
 import Evidence from './Evidence';
-import Form from './Form';
+import Form from '../../Authority/Home/Form2';
 import FormHandle from './FormHandle';
 import ViolatorContact from './ViolatorContact';
 import VideoCall from './VideoCall';

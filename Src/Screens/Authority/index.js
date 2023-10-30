@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import MainHome from './Home/MainHome';
 import Evidence from './Home/Evidence';
 import Form from './Home/Form';
+import Form2 from './Home/Form2';
 import VideoCall from './Home/VideoCall';
 
 
@@ -18,6 +19,7 @@ export default function Auths() {
         <Stack.Screen name="MainHome" component={MainHome} />
         <Stack.Screen name="Evidence" component={Evidence} />
         <Stack.Screen name="Form" component={Form} />
+        <Stack.Screen name="Form2" component={Form2} />
         <Stack.Screen name="VideoCall" component={VideoCall} />
       </Stack.Navigator>
   )

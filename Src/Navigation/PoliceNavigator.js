@@ -7,7 +7,7 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 import Home from "../Screens/Police/Home";
 import Account from "../Screens/Police/Account";
-import Form from "../Screens/Police/Home/Form";
+import Form from "../Screens/Authority/Home/Form2";
 const Tab = createBottomTabNavigator();
 
 export default function PoliceNavigator() {

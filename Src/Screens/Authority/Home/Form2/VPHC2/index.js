@@ -1,7 +1,7 @@
 import {Text,View,TouchableOpacity,SafeAreaView, ScrollView} from 'react-native'
 import {styles} from './style'
 
-export default function VPHC({navigation}){
+export default function VPHC2({navigation}){
     // Only for testing purpose
     const reportId = "04"
     const time = new Date()
@@ -27,10 +27,10 @@ export default function VPHC({navigation}){
     const phoneNum = "0123456789"
 
     return(
-        <ScrollView>
+        <ScrollView style={{marginTop:"15%",marginHorizontal:"1%"}}>
             <View style={{alignItems:"center"}}>
                 <TouchableOpacity style={{flexDirection:"row",right:"15%",}} onPress={()=>navigation.navigate("ViolatorInf")}>
-                    <Image source={require("../../../../assets/arrow.png")}/>
+                    <Image source={require("../../../../../assets/arrow.png")}/>
                 </TouchableOpacity>
             </View>
             <View style={styles.leading}>
@@ -59,15 +59,15 @@ export default function VPHC({navigation}){
 
             <Text style={{left:"2%",marginBottom:"2%"}}><Text style={styles.Bblack}>Địa chỉ:</Text> {address}</Text>
 
-            <View style={{flexDirection:"row"}}>
+            <View>
                 <Text style={{left:"2%",marginBottom:"2%"}}> <Text style={styles.Bblack}>Nghề nghiệp(lĩnh vực hoạt động):</Text> {job} </Text>
-                <Text > <Text style={styles.Bblack}>Năm sinh:</Text> {bornYear}</Text>
+                <Text style={{left:"2%",marginBottom:"2%"}}> <Text style={styles.Bblack}>Năm sinh:</Text> {bornYear}</Text>
             </View>
 
             <Text style={{left:"2%",marginBottom:"2%"}}><Text style={styles.Bblack}>Số CMND hoặc hộ chiếu Quyết định thành lập hoặc ĐKKD:</Text> {id}</Text>
 
             <Text style={{left:"2%",marginBottom:"2%"}}><Text style={styles.Bblack}>Ngày cấp:</Text>{idDate}/{idMonth}/{idYear} <Text style={styles.Bblack}>Nơi cấp:</Text>{idCity}</Text>
-            <Text style={{left:"2%",marginBottom:"2%"}}><Text style={styles.Bblack}>Phương tiện sử dụng khi vi phạm:</Text> {plateNum}</Text>
+            <Text style={{left:"2%",marginBottom:"2%"}}><Text style={styles.Bblack}>Chủ sỡ hữu phương tiện:</Text> {plateNum}</Text>
             <Text style={{left:"2%",marginBottom:"2%"}}><Text style={styles.Bblack}>Số điện thoại liên lạc:</Text> {phoneNum}</Text>
 
             <View style={{marginVertical:"5%"}}>
@@ -90,7 +90,7 @@ export default function VPHC({navigation}){
                 </View>
             </View>
 
-            <TouchableOpacity style={styles.btn}>
+            <TouchableOpacity style={styles.btn} onPress={()=>navigation.navigate("Done")}>
                 <Text style={styles.black}>Thông báo cho người vi phạm</Text>
             </TouchableOpacity>
         </ScrollView>

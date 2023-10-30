@@ -34,7 +34,7 @@ export default function Judged({navigation}){
             <View style={{marginTop:"20%"}}>
                 <View>
                     <TouchableOpacity style={{flexDirection:"row",right:"15%",}} onPress={()=>navigation.navigate("ViolatorInf")}>
-                        <Image source={require("../../../../assets/arrow.png")}/>
+                        <Image source={require("../../../../../assets/arrow.png")}/>
                     </TouchableOpacity>
                 </View>
                 
