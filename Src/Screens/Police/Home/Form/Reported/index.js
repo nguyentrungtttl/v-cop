@@ -1,4 +1,4 @@
-import {View,Text,TouchableOpacity,SafeAreaView} from 'react-native'
+import {View,Text,TouchableOpacity,SafeAreaView, ScrollView} from 'react-native'
 import {useState} from 'react'
 import {styles} from './style'
 import {Picker} from '@react-native-picker/picker'
@@ -24,7 +24,12 @@ export default function Reported({navigation}){
         {key:'5', value:'Bắn tốc độ'},
     ]
     return(
-        <SafeAreaView>
+        <ScrollView>
+            <View>
+                <TouchableOpacity style={{flexDirection:"row",right:"15%",}} onPress={()=>navigation.navigate("ViolatorInf")}>
+                    <Image source={require("../../../../assets/arrow.png")}/>
+                </TouchableOpacity>
+            </View>
             <View style={styles.leading}>
                 <Text style={{top:"1%"}}>Số {reportedId} QĐ-XPVPHC</Text>
                 <View style={styles.alignCenter}>
@@ -72,6 +77,6 @@ export default function Reported({navigation}){
             <TouchableOpacity style={styles.btn} onPress={()=>navigation.navigate("Done")}>
                 <Text>THÔNG BÁO CHO NGƯỜI VI PHẠM</Text>
             </TouchableOpacity>
-        </SafeAreaView>
+        </ScrollView>
     )
 }

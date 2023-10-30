@@ -10,7 +10,12 @@ export default function ViolatorInf({navigation}){
     return(
         <ScrollView>
             <View>
-                <Text style={[styles.header,{marginTop:"20%"}]}>THÔNG TIN CHỦ XE</Text>
+                <View style={{flexDirection:"row",marginTop:"20%"}}>
+                    <TouchableOpacity style={{flexDirection:"row",right:"15%",}} onPress={()=>navigation.navigate("ViolatorContact")}>
+                        <Image source={require("../../../../assets/arrow.png")}/>
+                    </TouchableOpacity>
+                    <Text style={styles.header}>THÔNG TIN CHỦ XE</Text>
+                </View>
                 
                 <Text style={styles.black}>Tên chủ phương tiện</Text>
                 <Text style={styles.textBox}>{violator}</Text>

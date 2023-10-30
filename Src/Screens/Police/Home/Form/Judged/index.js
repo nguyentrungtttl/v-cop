@@ -32,7 +32,12 @@ export default function Judged({navigation}){
     return(
         <ScrollView style={{flex:2}}>
             <View style={{marginTop:"20%"}}>
-            
+                <View>
+                    <TouchableOpacity style={{flexDirection:"row",right:"15%",}} onPress={()=>navigation.navigate("ViolatorInf")}>
+                        <Image source={require("../../../../assets/arrow.png")}/>
+                    </TouchableOpacity>
+                </View>
+                
                 <View style={styles.leading}>
                     <Text>Số:{judgeId}QĐ-XPVPHC</Text>
                     <View style={styles.alignCenter}>

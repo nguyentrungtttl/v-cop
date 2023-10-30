@@ -29,10 +29,20 @@ export default function Paid({navigation}){
     const idLocation = "UBND phường Thọ Quang"
     const geoLocation = "12A Trần Đăng Ninh"
     const fine = "250.000VNĐ"
+    
+
+    const pressHandler = ()=>{
+        navigation.navigate("MainHome")
+    }
 
     return(
         <View style={{marginHorizontal:"4%",marginTop:"4%",backgroundColor:"white"}}>
-            <Text style={{fontSize:40,fontWeight:"bold",textAlign:"center",marginTop:"20%"}}>NỘP PHẠT</Text>
+            <View style={{flexDirection:"row",justifyContent:"space-around"}}>
+                <TouchableOpacity style={{flexDirection:"row",right:"15%",}} onPress={()=>navigation.navigate("Calendar")}>
+                    <Image source={require("../../../../assets/arrow.png")}/>
+                </TouchableOpacity>
+                <Text style={{fontSize:40,fontWeight:"bold",textAlign:"center",marginTop:"20%"}}>NỘP PHẠT</Text>
+            </View>
             <Text style={{fontSize:16,fontWeight:"bold",marginTop:"3%"}}>Bấm vào để xem: Quyết định xử phạt</Text>
             <ScrollView style={{borderWidth:3,borderColor:"black",height:450,paddingHorizontal:"5%"}}>
                 <View style={{marginTop:"10%"}}>
@@ -114,7 +124,7 @@ export default function Paid({navigation}){
             </ScrollView>
         <Text style={{marginTop:"5%"}}><Text style={{fontSize:17,fontWeight:"bold"}}>SỐ TIỀN PHẠT:</Text> {fine}</Text>
         <Text>*Liên kết với tài khoản ngân hàng</Text>
-        <TouchableOpacity style={styles.btn}>
+        <TouchableOpacity style={styles.btn} onPress={pressHandler}>
                     <Text>NỘP PHẠT</Text>
         </TouchableOpacity>
         </View>

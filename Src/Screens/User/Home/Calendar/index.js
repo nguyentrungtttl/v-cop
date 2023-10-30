@@ -26,7 +26,14 @@ export default function SetAppointment(){
     MinDate = MyDate.getFullYear() +'-'+ ('0'+(MyDate.getMonth()+1)).slice(-2)+'-'+('0' + MyDate.getDate()).slice(-2)
     return(
         <SafeAreaView style={{marginHorizontal:"2%"}}>
-            <Text style={{fontSize: 24,textAlign:"center",fontWeight:"bold"}}>ĐẶT LỊCH</Text>
+            <View style={{flexDirection:"row",justifyContent:"space-around"}}>
+                <TouchableOpacity style={{flexDirection:"row",right:"15%",}} onPress={()=>navigation.navigate("Notification")}>
+                    <Image source={require("../../../../assets/arrow.png")}/>
+                </TouchableOpacity>
+
+                <Text style={{fontSize: 24,textAlign:"center",fontWeight:"bold"}}>ĐẶT LỊCH</Text>
+                
+            </View>
             <Calendar style={{marginTop:"4%"}}
             onDayPress={day => {
             setDaySelect(day.dateString)
