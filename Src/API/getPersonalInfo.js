@@ -1,5 +1,5 @@
 import { FIREBASE_AUTH } from '../../firebaseConfig';
-import { collection, doc, setDoc, getDoc} from 'firebase/firestore';
+import { collection, doc, setDoc, getDoc, query, where} from 'firebase/firestore';
 import { FIRESTORE_DB } from '../../firebaseConfig';
 
 export const getPersonalInfo = async ()=>{
@@ -15,3 +15,17 @@ export const getPersonalInfo = async ()=>{
     return data;
 }
 
+export const getInfoFromPlateNumber = async({plateNumber}) => {
+    const ref = doc(FIRESTORE_DB, 'user')
+    const userSnapShot = await getDoc(ref)
+    let data;
+    userSnapShot.forEach((doc)=>{
+        const userId = doc.id
+        const userData = doc.data();
+        if (userData.plateNumber === plateNumber) {
+            data = userData;
+            console.log('this is the owner of the car', plateNumber);
+        }
+    })
+    return data;
+}

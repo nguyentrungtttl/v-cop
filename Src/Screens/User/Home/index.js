@@ -25,7 +25,7 @@ export default function Home() {
   };
   handleGetInfo();
 
- 
+  
   return (
     <Stack.Navigator
       initialRouteName="MainHome"
