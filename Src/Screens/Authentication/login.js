@@ -18,6 +18,7 @@ const Login = ({navigation}) =>{
     console.log(position)
     if (position === 'user') navigation.navigate('UserNavigator')
     if (position === 'police') navigation.navigate('PoliceNavigator')
+    if (position=='authority') navigation.navigate("AuthorityNavigator")
   }
 
   return(

@@ -8,17 +8,18 @@ import Judged from './components/judged'
 export default function Notification({navigation}) {
   const count = 0
   const data= [
-    {plateNum:"43E-123456", credit: "Nguyễn Duy", id:1},
-    {plateNum:"55bfdsk123", credit:"Quân Văn Tứ" ,id:2}
+    {plateNum:"92A-03136", credit: "Lê Tấn Minh", id:1},
+    {plateNum:"92A-03136", credit:"Lê Tấn Minh" ,id:2}
   ]
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{backgroundColor:"white",flex:1}}>
       <View style={{flexDirection:"row",justifyContent:"space-around"}}>
-        <TouchableOpacity style={{flexDirection:"row",right:"15%",}} onPress={()=>navigation.navigate("MainHome")}>
+        <TouchableOpacity style={{flexDirection:"row", right:"10%"}} onPress={()=>navigation.navigate("MainHome")}>
           <Image source={require("../../../../assets/arrow.png")}/>
           <Text style={{left:"60%"}}>{count} kết quả</Text>
         </TouchableOpacity>
+
         <TouchableOpacity>
           <Image style={{left:"120%"}} source={require("../../../../assets/filter.png")}/>
         </TouchableOpacity>
@@ -28,7 +29,7 @@ export default function Notification({navigation}) {
         <FlatList 
           data={data}
           renderItem={({item,index})=>(
-            <Judged plateNum={item} policeName={item}/>
+            <Judged plateNum={item} policeName={item} onPress={()=>navigation.navigate("VPHC")}/>
         )}/>
       </ScrollView>
 

@@ -1,10 +1,47 @@
-import {View,SafeAreaView,TouchableOpacity,Text} from 'react-native'
+import {View,SafeAreaView,TouchableOpacity,Text, ScrollView,Image} from 'react-native'
 import React, {useState} from 'react'
 import {styles} from './style'
 
 export default function VPHC({navigation}){
+        // Only for testing purpose
+        const reportId = "02"
+        const plateNum = "92A-03136"
+        const time = new Date()
+        const hour = time.getHours()
+        const minute = time.getMinutes()
+        const day = time.getDate()
+        const month = time.getMonth()+1
+        const year = time.getFullYear()
+        const [fault,setFault] = useState()
+        const data = [
+            {key:'1', value:'Đậu xe sai quy định'},
+            {key:'2', value:'Không đội mũ bảo hiểm'},
+            {key:'3', value:'Uống rượu bia khi lái xe'},
+            {key:'4', value:'Vượt đèn đỏ'},
+            {key:'5', value:'Bắn tốc độ'},
+        ]
+        const city ="Đà Nẵng"
+        const district="Hải Châu"
+        const username= "Nguyễn Văn A"
+        const position = "Trung úy"
+        const organization = "Lê Tấn Minh"
+        const address = "Trần Đăng Ninh, Hải Châu, Đà Nẵng"
+        const job = "#######"
+        const id = "123456789"
+        const bornYear="19##"
+        const idDate = "00"
+        const idMonth= "00"
+        const idYear="19##"
+        const idCity = "Đà Nẵng"
+        const phoneNum = "+84#####"
     return(
-        <SafeAreaView>
+        <ScrollView style={{backgroundColor:"white"}}>
+            <View style={{marginTop:"15%",}}>
+            <View style={{marginBottom:"5%",left:"5%"}}>
+                <TouchableOpacity style={{flexDirection:"row",right:"15%",}} onPress={()=>navigation.navigate("Notification")}>
+                    <Image source={require("../../../../../assets/arrow.png")}/>
+                </TouchableOpacity>
+            </View>
             <View style={styles.leading}>
                 <Text style={{top:"2%"}}>Số:{reportId}BB-VPHC</Text>
 
@@ -45,7 +82,7 @@ export default function VPHC({navigation}){
             </View>
 
             <View>
-                <Text style={styles.Bblack}>Số tiền phải nộp:</Text>
+                <Text style={[styles.Bblack,{right:"3%"}]}>Số tiền phải nộp:</Text>
             </View>
 
             <View style={{flexDirection:"row", left:"1%"}}>
@@ -67,6 +104,7 @@ export default function VPHC({navigation}){
             <TouchableOpacity style={styles.btn} onPress={()=>navigation.navigate("Judged")}>
                 <Text style={styles.black}>RA QUYẾT ĐỊNH XỬ PHẠT</Text>
             </TouchableOpacity>
-        </SafeAreaView>
+            </View>
+        </ScrollView>
     )
 }

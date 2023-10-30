@@ -1,4 +1,4 @@
-import {Text,View,TouchableOpacity,SafeAreaView, ScrollView} from 'react-native'
+import {Text,View,TouchableOpacity,SafeAreaView, ScrollView,Image} from 'react-native'
 import {styles} from './style'
 
 export default function VPHC2({navigation}){
@@ -12,23 +12,23 @@ export default function VPHC2({navigation}){
     const year = time.getFullYear()
     const city ="Đà Nẵng"
     const district="Hải Châu"
-    const username= "Nguyễn Anh Huy"
+    const username= "Nguyễn Văn A"
     const position = "Trung úy"
-    const organization = "Gia đình nhà ###"
-    const address = "12A Trần Đăng Ninh,quận Hải Châu, thành phố Đà Nẵng"
-    const job = "Giáo viên trường Skyline"
+    const organization = "Lê Tấn Minh"
+    const address = "Trần Đăng Ninh, Hải Châu, Đà Nẵng"
+    const job = "#######"
     const id = "123456789"
-    const bornYear="1989"
-    const idDate = "15"
-    const idMonth= "01"
-    const idYear="1998"
+    const bornYear="19##"
+    const idDate = "00"
+    const idMonth= "00"
+    const idYear="19##"
     const idCity = "Đà Nẵng"
-    const plateNum = "43A-037472"
-    const phoneNum = "0123456789"
+    const plateNum = "92A-03136"
+    const phoneNum = "+84#####"
 
     return(
-        <ScrollView style={{marginTop:"15%",marginHorizontal:"1%"}}>
-            <View style={{alignItems:"center"}}>
+        <ScrollView style={{marginTop:"15%",marginHorizontal:"1%",backgroundColor:"white"}}>
+            <View style={{alignItems:"center",marginBottom:"5%",right:"40%"}}>
                 <TouchableOpacity style={{flexDirection:"row",right:"15%",}} onPress={()=>navigation.navigate("ViolatorInf")}>
                     <Image source={require("../../../../../assets/arrow.png")}/>
                 </TouchableOpacity>

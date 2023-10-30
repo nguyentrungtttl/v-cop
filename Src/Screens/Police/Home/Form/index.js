@@ -10,10 +10,11 @@ import VPHC2 from "./VPHC2";
 import ViolatorContact from "../ViolatorContact";
 import VPHC3 from "./VPHC3";
 
-export default function Form2(){
+export default function Form(){
     const Stack = createStackNavigator()
     return(
         <Stack.Navigator initialRouteName="ViolatorContact" screenOptions={{headerShown:false}} >
+            {/* <Stack.Screen name="ViolatorInf" component={ViolatorInf}/> */}
             <Stack.Screen name="ViolatorContact" component={ViolatorContact}/>
             <Stack.Screen name="ViolatorInf" component={ViolatorInf}/>
             <Stack.Screen name="Judged" component={Judged}/>

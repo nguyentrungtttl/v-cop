@@ -1,7 +1,7 @@
-import {Text,View,TouchableOpacity,SafeAreaView, ScrollView,Image} from 'react-native'
+import {Text,View,TouchableOpacity,SafeAreaView, ScrollView} from 'react-native'
 import {styles} from './style'
 
-export default function VPHC3({navigation}){
+export default function VPHC({navigation}){
     // Only for testing purpose
     const reportId = "04"
     const time = new Date()
@@ -26,17 +26,10 @@ export default function VPHC3({navigation}){
     const plateNum = "43A-037472"
     const phoneNum = "0123456789"
 
-
-    const pressHandler = ()=>{
-        // Testing
-        navigation.navigate("ViolatorContact")
-        //Testting
-    }
-
     return(
-        <ScrollView style={{marginTop:"15%",marginHorizontal:"1%"}}>
-            <View style={{alignItems:"center",marginBottom:"5%",right:"40%"}}>
-                <TouchableOpacity style={{flexDirection:"row",right:"15%",}} onPress={pressHandler}>
+        <ScrollView>
+            <View style={{alignItems:"center"}}>
+                <TouchableOpacity style={{flexDirection:"row",right:"15%",}} onPress={()=>navigation.navigate("ViolatorInf")}>
                     <Image source={require("../../../../../assets/arrow.png")}/>
                 </TouchableOpacity>
             </View>
@@ -66,15 +59,15 @@ export default function VPHC3({navigation}){
 
             <Text style={{left:"2%",marginBottom:"2%"}}><Text style={styles.Bblack}>Địa chỉ:</Text> {address}</Text>
 
-            <View>
+            <View style={{flexDirection:"row"}}>
                 <Text style={{left:"2%",marginBottom:"2%"}}> <Text style={styles.Bblack}>Nghề nghiệp(lĩnh vực hoạt động):</Text> {job} </Text>
-                <Text style={{left:"2%",marginBottom:"2%"}}> <Text style={styles.Bblack}>Năm sinh:</Text> {bornYear}</Text>
+                <Text > <Text style={styles.Bblack}>Năm sinh:</Text> {bornYear}</Text>
             </View>
 
             <Text style={{left:"2%",marginBottom:"2%"}}><Text style={styles.Bblack}>Số CMND hoặc hộ chiếu Quyết định thành lập hoặc ĐKKD:</Text> {id}</Text>
 
             <Text style={{left:"2%",marginBottom:"2%"}}><Text style={styles.Bblack}>Ngày cấp:</Text>{idDate}/{idMonth}/{idYear} <Text style={styles.Bblack}>Nơi cấp:</Text>{idCity}</Text>
-            <Text style={{left:"2%",marginBottom:"2%"}}><Text style={styles.Bblack}>Chủ sỡ hữu phương tiện:</Text> {plateNum}</Text>
+            <Text style={{left:"2%",marginBottom:"2%"}}><Text style={styles.Bblack}>Phương tiện sử dụng khi vi phạm:</Text> {plateNum}</Text>
             <Text style={{left:"2%",marginBottom:"2%"}}><Text style={styles.Bblack}>Số điện thoại liên lạc:</Text> {phoneNum}</Text>
 
             <View style={{marginVertical:"5%"}}>
@@ -97,7 +90,7 @@ export default function VPHC3({navigation}){
                 </View>
             </View>
 
-            <TouchableOpacity style={styles.btn} onPress={()=>navigation.navigate("Done")}>
+            <TouchableOpacity style={styles.btn}>
                 <Text style={styles.black}>Thông báo cho người vi phạm</Text>
             </TouchableOpacity>
         </ScrollView>

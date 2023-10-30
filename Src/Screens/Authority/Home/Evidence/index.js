@@ -27,8 +27,8 @@ export default function Evidence({navigation}) {
       <ScrollView>
         <FlatList 
           data={data}
-          renderItem={({item,index})=>(
-            <Meeting violator={item} onPress={navigation.navigate("VideoCall")} />
+          renderItem={({item})=>(
+            <Meeting violator={item} onPress={()=>navigation.navigate("VideoCall")} />
         )}/>
       </ScrollView>
 
