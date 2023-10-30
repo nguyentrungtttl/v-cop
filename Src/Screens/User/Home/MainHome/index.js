@@ -5,8 +5,10 @@ import { Button } from 'react-native-paper'
 import { Image } from 'react-native'
 import TaskBtn from './components/button'
 import Meeting from './components/meeting'
+import { getPersonalInfo } from '../../../../API/getPersonalInfo'
 
-export default function MainHome({navigation}) {
+export default function MainHome({navigation, personalInfo}) {
+  console.log(personalInfo);
   const [count,setCount] = useState(0)
   const [faults,setFault]=useState(
     [

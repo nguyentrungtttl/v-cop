@@ -1,11 +1,13 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native'
 import styles from './style'
 import { handleLogin } from '../../API/authentication'
 import {doc,getDoc} from "firebase/firestore/lite"
 import UserNavigator from '../../Navigation/UserNavigator'
+import { getPersonalInfo } from '../../API/getPersonalInfo'
 
-const Login =({navigation}) =>{
+const Login = ({navigation}) =>{
+  
   const [username,setUsername] = useState('')
   const [id,setId] =useState('')
   const [password,setPassWord] = useState('')
