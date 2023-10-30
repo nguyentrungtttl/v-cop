@@ -57,9 +57,11 @@ export default function Notification({navigation}) {
           <Image source={require("../../../../assets/arrow.png")}/>
           <Text style={{left:"60%"}}>{count} kết quả</Text>
         </TouchableOpacity>
+
         <TouchableOpacity>
           <Image style={{left:"120%"}} source={require("../../../../assets/filter.png")}/>
         </TouchableOpacity>
+        
       </View>
       <ScrollView>
         <FlatList style={{height:800}}

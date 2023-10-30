@@ -1,4 +1,4 @@
-import {Text,View,TouchableOpacity,SafeAreaView} from 'react-native'
+import {Text,View,TouchableOpacity,SafeAreaView, ScrollView} from 'react-native'
 import {styles} from './style'
 
 export default function VPHC({navigation}){
@@ -27,7 +27,12 @@ export default function VPHC({navigation}){
     const phoneNum = "0123456789"
 
     return(
-        <SafeAreaView>
+        <ScrollView>
+            <View style={{alignItems:"center"}}>
+                <TouchableOpacity style={{flexDirection:"row",right:"15%",}} onPress={()=>navigation.navigate("ViolatorInf")}>
+                    <Image source={require("../../../../assets/arrow.png")}/>
+                </TouchableOpacity>
+            </View>
             <View style={styles.leading}>
                 <Text style={{top:"2%"}}>Số:{reportId}BB-VPHC</Text>
 
@@ -88,6 +93,6 @@ export default function VPHC({navigation}){
             <TouchableOpacity style={styles.btn}>
                 <Text style={styles.black}>Thông báo cho người vi phạm</Text>
             </TouchableOpacity>
-        </SafeAreaView>
+        </ScrollView>
     )
 }
