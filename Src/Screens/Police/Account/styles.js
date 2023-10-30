@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
         flex:0.35,
         top: "10%",
         left:"38%",
-        borderRadius:"50%"
+        borderRadius:30
     },
     userInfo:{
         top: "11%",
