@@ -1,4 +1,4 @@
-import {View,Text,ScrollView,TouchableOpacity,FlatList,CheckBox} from 'react-native'
+import {View,Text,ScrollView,TouchableOpacity,FlatList,CheckBox,Image} from 'react-native'
 import {styles} from './style'
 
 
@@ -36,15 +36,16 @@ export default function Paid({navigation}){
     }
 
     return(
-        <View style={{marginHorizontal:"4%",marginTop:"4%",backgroundColor:"white"}}>
-            <View style={{flexDirection:"row",justifyContent:"space-around"}}>
-                <TouchableOpacity style={{flexDirection:"row",right:"15%",}} onPress={()=>navigation.navigate("Calendar")}>
+        <ScrollView style={{backgroundColor:"white"}}>
+        <View style={{marginHorizontal:"4%",marginTop:"4%"}}>
+            <View style={{flexDirection:"row",left:"10%"}}>
+                <TouchableOpacity style={{flexDirection:"row",right:"15%",top:"40%"}} onPress={()=>navigation.navigate("Notification")}>
                     <Image source={require("../../../../assets/arrow.png")}/>
                 </TouchableOpacity>
                 <Text style={{fontSize:40,fontWeight:"bold",textAlign:"center",marginTop:"20%"}}>NỘP PHẠT</Text>
             </View>
             <Text style={{fontSize:16,fontWeight:"bold",marginTop:"3%"}}>Bấm vào để xem: Quyết định xử phạt</Text>
-            <ScrollView style={{borderWidth:3,borderColor:"black",height:450,paddingHorizontal:"5%"}}>
+            <ScrollView style={{borderWidth:3,borderColor:"black",height:600,paddingHorizontal:"5%"}}>
                 <View style={{marginTop:"10%"}}>
                 
                     <View style={styles.leading}>
@@ -128,4 +129,5 @@ export default function Paid({navigation}){
                     <Text>NỘP PHẠT</Text>
         </TouchableOpacity>
         </View>
+        </ScrollView>
 )}

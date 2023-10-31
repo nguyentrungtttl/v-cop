@@ -10,6 +10,7 @@ import Login from "./Src/Screens/Authentication/login";
 import SignUp from "./Src/Screens/Authentication/signUp";
 import UserNavigator from "./Src/Navigation/UserNavigator";
 import PoliceNavigator from "./Src/Navigation/PoliceNavigator";
+import AuthorityNavigator from "./Src/Navigation/AuthorityNavigator";
 
 const Stack = createStackNavigator();
 
@@ -44,6 +45,11 @@ export default function App() {
             <Stack.Screen
               name="PoliceNavigator"
               component={PoliceNavigator}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="AuthorityNavigator"
+              component={AuthorityNavigator}
               options={{ headerShown: false }}
             />
           </Stack.Navigator>

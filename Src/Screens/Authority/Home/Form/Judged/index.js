@@ -1,4 +1,4 @@
-import {View,Text,TouchableOpacity,SafeAreaView,ScrollView, FlatList} from 'react-native'
+import {View,Text,TouchableOpacity,SafeAreaView,ScrollView, FlatList,Image} from 'react-native'
 import {useState} from 'react'
 import {styles} from "./style"
 
@@ -31,8 +31,13 @@ export default function Judged({navigation}){
     const fine = "250.000VNĐ"
     return(
         <ScrollView>
-            <View style={{marginTop:"20%",marginHorizontal:"2%"}}>
-            
+            <View style={{marginTop:"15%",marginHorizontal:"2%"}}>
+                <View style={{left:"5%",marginBottom:"5%"}}>
+                    <TouchableOpacity style={{flexDirection:"row",right:"15%",}} onPress={()=>navigation.navigate("VPHC")}>
+                        <Image source={require("../../../../../assets/arrow.png")}/>
+                    </TouchableOpacity>
+                </View>
+
                 <View style={styles.leading}>
                     <Text>Số:{judgeId}QĐ-XPVPHC</Text>
                     <View style={styles.alignCenter}>

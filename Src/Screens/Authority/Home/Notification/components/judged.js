@@ -2,7 +2,7 @@ import {View,Text, TouchableOpacity} from 'react-native'
 import React from 'react'
 import {styles} from './style'
 
-export default function Judged({plateNum,policeName}){
+export default function Judged({plateNum,policeName,onPress}){
     // Only for testing purpose
     const district="Hải Châu"
     const city="Đà Nẵng"
@@ -19,8 +19,8 @@ export default function Judged({plateNum,policeName}){
                 <Text>Cán bộ phụ trách</Text>
                 <Text style={styles.black}>{policeName.credit}</Text>
                 <Text style={styles.black}>{faultDate}</Text>
-                <TouchableOpacity style={styles.bluebtn}>
-                    <Text style={styles.white}>LÀM VIỆC</Text>
+                <TouchableOpacity style={styles.bluebtn} onPress={onPress}>
+                    <Text style={styles.white}>XEM CHI TIẾT</Text>
                 </TouchableOpacity>
             </View>
 

@@ -7,7 +7,7 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 import Home from "../Screens/Authority/Home";
 import Account from "../Screens/Authority/Account";
-import Form from "../Screens/Authority/Home/Form";
+import Form2 from "../Screens/Authority/Home/Form2";
 const Tab = createBottomTabNavigator();
 
 export default function AuthorityNavigator() {
@@ -70,8 +70,8 @@ export default function AuthorityNavigator() {
       />
 
       <Tab.Screen
-        name="Form"
-        component={Form}
+        name="Form2"
+        component={Form2}
         options={{
           tabBarIcon: () => {
             return <Image source={require("../assets/scan.png")} />;

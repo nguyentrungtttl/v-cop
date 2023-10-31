@@ -8,7 +8,7 @@ export default function ViolatorInf({navigation}){
     const address = "Trần Đăng Ninh, Hải Châu, Đà Nẵng"
     const [count,setCount] = useState(0)
     return(
-        <ScrollView style={{backgroundColor:"white"}}>
+        <ScrollView style={{backgroundColor:"white",flex:2}}>
             <View>
                 <View style={{flexDirection:"row",marginTop:"20%",justifyContent:"center"}}>
                     <TouchableOpacity style={{flexDirection:"row",right:"15%",top:"40%"}} onPress={()=>navigation.navigate("ViolatorContact")}>
@@ -28,7 +28,7 @@ export default function ViolatorInf({navigation}){
                 
 
                 <Text style={styles.header}>HỒ SƠ ĐĂNG KIỂM</Text>
-                <Image source={require('../../../../../assets/registration.jpg')} style={styles.image} />
+                <Image source={require('../../../../../assets/regis.jpg')} style={styles.image} />
 
                 <Text style={styles.header}>BẰNG LÁI XE</Text>
                 <Image source={require('../../../../../assets/license.jpg')} style={styles.image} />
@@ -40,7 +40,7 @@ export default function ViolatorInf({navigation}){
                 </View>
 
                 <Text style={styles.header}>GIẤY ĐĂNG KÝ XE</Text>
-                <Image  style={styles.image} source={require('../../../../../assets/regis.jpg')}/>
+                <Image  style={styles.image} source={require('../../../../../assets/registration.jpg')}/>
 
                 <View style={{flexDirection:"row",marginTop:"20%",marginLeft:"7%"}}>
                     <TouchableOpacity style={[styles.btn1,{alignItems:"center",justifyContent:"center"}]} onPress={()=> navigation.navigate("VPHC2")}>

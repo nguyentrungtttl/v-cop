@@ -26,7 +26,7 @@ export const handleLogin = async ({id, password}) => {
   }
 };
 
-export const handleSignUp = async ({ id, password, username, phoneNum,job="undefined",birthdate="00/00/0000", position="user" }) => {
+export const handleSignUp = async ({ id, password, username, phoneNum,job="undefined",birthdate="00/00/0000", position="user",plateNum = 0 }) => {
     try {
       const response = await createUserWithEmailAndPassword(FIREBASE_AUTH, `${id}@gmail.com`, password);
       console.log(response);
@@ -42,7 +42,8 @@ export const handleSignUp = async ({ id, password, username, phoneNum,job="undef
           phoneNumber: phoneNum,
           job: job,
           birthdate: birthdate,
-          position: position
+          position: position,
+          plateNum: plateNum
         });
         console.log('User information successfully added to Firestore');
       } else {
