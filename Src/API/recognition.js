@@ -13,7 +13,7 @@ const recognizePlate = async (imageUri) => {
         formData,
         {
           headers: {
-            'Authorization': `Token 2df8a1a50b28f66254829a04d4594aeca1f055a6`,
+            'Authorization': `Token 2a97f6582486e5b724707dd0007222b12d01badc`,
             'Content-Type': 'multipart/form-data',
           },
         }

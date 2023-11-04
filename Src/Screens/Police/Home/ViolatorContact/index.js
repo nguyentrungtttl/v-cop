@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Button, Image, Text,SafeAreaView,TouchableOpacity,ScrollView } from 'react-native';
+import { View, Button, Image, Text,SafeAreaView,TouchableOpacity,ScrollView, Alert } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import recognitionPlate from '../../../../API/recognition';
 import { styles } from './styles';
@@ -27,29 +27,29 @@ export default function ViolatorContact({navigation}) {
     });
     console.log('result.uri', result.assets[0].uri);
     setImageUri(result.assets[0].uri);
-    await handleRecognizePlate()
   };
 
   const handleRecognizePlate = async () => {
-  
     try {
       console.log('recognizing');
+      console.log('imageUri', imageUri);
       const plateData = await recognitionPlate(imageUri);
-      setPlateNumber(plateData.results[0].plate);
-      console.log('License Plate Data:', plateData);
-      // const handleSetOwnerData = async () =>{
-      //   setOwnerData(await getInfoFromPlateNumber())
-      //   console.log('owner data: ', ownerData);
-      // }
-      // handleSetOwnerData();
+      console.log('License Plate Data:', plateData.results[0].plate);
+      setPlateNumber(plateData.results[0].plate);  
     } catch (error) {
+      Alert.alert('Không thể nhận diện được biển số này')
       console.error('Error recognizing plate:', error);
     }
-    navigation.navigate("ViolatorInf")
+    // navigation.navigate("ViolatorInf")
 
   };
-  console.log(plateNumber);
-
+  // console.log(plateNumber);
+  useEffect(()=>{
+    const handle = async()=>{
+      await handleRecognizePlate();
+    }
+    handle();
+  },[imageUri])
   return (
     <ScrollView style={{ flex: 1, backgroundColor:"white" }}>
       <View style={{ flex: 1 }}>
@@ -66,7 +66,7 @@ export default function ViolatorContact({navigation}) {
 
             <View style={{marginTop:"5%"}}>
 
-            <Text style={{textAlign:"center"}}>Biển số xe: {plateNumber}</Text>
+            <Text style={{fontSize: 25, textAlign:"center"}}>Biển số nhận diện được: {plateNumber}</Text>
             <TouchableOpacity style={styles.btn} onPress={() => {navigation.navigate("VPHC")}}>
               <Text>Tạo biên bản thủ công</Text>
             </TouchableOpacity>
