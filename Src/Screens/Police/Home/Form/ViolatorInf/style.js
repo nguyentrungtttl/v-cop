@@ -43,6 +43,6 @@ export const styles = StyleSheet.create({
     image:{
         width:300,
         height:200,
-        left:"15%"
+        left:"7%"
     }
 })

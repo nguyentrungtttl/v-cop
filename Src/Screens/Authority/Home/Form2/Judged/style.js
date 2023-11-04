@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
         alignItems:"center"
     },
     judgedDate:{
-        marginTop:"10%%",
+        marginTop:"10%",
         textAlign:"right",
         color:"black",
         fontSize: 13,

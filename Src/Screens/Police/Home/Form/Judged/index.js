@@ -31,7 +31,7 @@ export default function Judged({navigation}){
     const fine = "250.000VNĐ"
     return(
         <ScrollView style={{flex:2,backgroundColor:"white"}}>
-            <View style={{marginTop:"15%"}}>
+            <View style={{marginTop:"10%"}}>
                 <View style={{marginBottom:"5%",left:"5%"}}>
                     <TouchableOpacity style={{flexDirection:"row",right:"15%",}} onPress={()=>navigation.navigate("ViolatorInf")}>
                         <Image source={require("../../../../../assets/arrow.png")}/>
@@ -48,7 +48,7 @@ export default function Judged({navigation}){
 
                 <Text style={styles.judgedDate}>{city} Ngày {date}tháng {month}năm {year}</Text>
 
-                <Text style={styles.Bred}>QUYẾT ĐỊNH</Text>
+                <Text style={[styles.Bred,{marginTop:"10%"}]}>QUYẾT ĐỊNH</Text>
                 <Text style={styles.Bblack}>Xử phạt vi phạm hành chính không lập biên bản</Text>
 
                 <View style={{marginLeft:"6%",marginTop:"10%"}}>
@@ -62,7 +62,7 @@ export default function Judged({navigation}){
                     </View>
 
 
-                    <Text style={[styles.Bblack,{marginTop:"10%"}]}>QUYẾT ĐỊNH:</Text>
+                    <Text style={styles.Bblack}>QUYẾT ĐỊNH:</Text>
 
                     <Text style={{marginTop:"5%"}}><Text style={styles.black}>Điều 1.</Text> Xử phạt vi phạm hành chính theo thủ tục xử phạt không lập biên bản đối với:</Text>
                     <Text>Ông (Bà)/Tổ chức: {organization}</Text>

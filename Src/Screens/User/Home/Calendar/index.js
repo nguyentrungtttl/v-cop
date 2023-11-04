@@ -25,13 +25,13 @@ export default function SetAppointment(){
     MaxDate = MaDate.getFullYear() +'-'+ ('0'+(MaDate.getMonth()+1)).slice(-2)+'-'+('0' + MaDate.getDate()).slice(-2)
     MinDate = MyDate.getFullYear() +'-'+ ('0'+(MyDate.getMonth()+1)).slice(-2)+'-'+('0' + MyDate.getDate()).slice(-2)
     return(
-        <SafeAreaView style={{marginHorizontal:"2%"}}>
+        <SafeAreaView style={{marginHorizontal:"2%",backgroundColor:"white"}}>
             <View style={{flexDirection:"row",justifyContent:"space-around"}}>
                 <TouchableOpacity style={{flexDirection:"row",right:"15%",}} onPress={()=>navigation.navigate("Notification")}>
                     <Image source={require("../../../../assets/arrow.png")}/>
                 </TouchableOpacity>
 
-                <Text style={{fontSize: 24,textAlign:"center",fontWeight:"bold"}}>ĐẶT LỊCH</Text>
+                <Text style={{fontSize: 24,textAlign:"center",fontWeight:"bold",right:"250%"}}>ĐẶT LỊCH</Text>
                 
             </View>
             <Calendar style={{marginTop:"4%"}}

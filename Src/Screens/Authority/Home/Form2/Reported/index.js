@@ -25,7 +25,7 @@ export default function Reported({navigation}){
     ]
     return(
         <ScrollView style={{backgroundColor:"white"}}>
-            <View style={{marginTop:"15%", left:"5%",marginBottom:"5%"}}>
+            <View style={{marginTop:"5%", left:"5%",marginBottom:"5%"}}>
                 <TouchableOpacity style={{flexDirection:"row"}} onPress={()=>navigation.navigate("ViolatorInf")}>
                     <Image source={require("../../../../../assets/arrow.png")}/>
                 </TouchableOpacity>

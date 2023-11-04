@@ -13,7 +13,7 @@ export default function Account({navigation}) {
         <Text style={styles.phoneNum}>0327140307</Text>
       </View>
 
-      <View style={{top:"10%",left:"4%"}}>
+      <View style={{top:"5%",left:"4%"}}>
         <SettingBtn title="Khai báo thông tin phương tiện" src={require('../../User/Account/components/icon/privateInfo.png')}  onPress={navigation.navigate("VehicleInfo")}/>
         <SettingBtn title="Lịch sử liên lạc" src={require('../../User/Account/components/icon/history.png')} />
         <View style={styles.box}></View>

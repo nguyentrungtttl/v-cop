@@ -39,10 +39,10 @@ export default function Paid({navigation}){
         <ScrollView style={{backgroundColor:"white"}}>
         <View style={{marginHorizontal:"4%",marginTop:"4%"}}>
             <View style={{flexDirection:"row",left:"10%"}}>
-                <TouchableOpacity style={{flexDirection:"row",right:"15%",top:"40%"}} onPress={()=>navigation.navigate("Notification")}>
+                <TouchableOpacity style={{flexDirection:"row",right:"15%",top:"60%"}} onPress={()=>navigation.navigate("Notification")}>
                     <Image source={require("../../../../assets/arrow.png")}/>
                 </TouchableOpacity>
-                <Text style={{fontSize:40,fontWeight:"bold",textAlign:"center",marginTop:"20%"}}>NỘP PHẠT</Text>
+                <Text style={{fontSize:40,fontWeight:"bold",textAlign:"center",marginTop:"10%",right:"35%"}}>NỘP PHẠT</Text>
             </View>
             <Text style={{fontSize:16,fontWeight:"bold",marginTop:"3%"}}>Bấm vào để xem: Quyết định xử phạt</Text>
             <ScrollView style={{borderWidth:3,borderColor:"black",height:600,paddingHorizontal:"5%"}}>
