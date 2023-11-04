@@ -55,6 +55,10 @@ export default function ViolatorContact({navigation}) {
             <Image source={{ uri: imageUri }} style={{ width: 300, height: 200 }} />
 
             <View style={{marginTop:"5%"}}>
+
+            <View>
+              <Text >Biển số xe được nhận diện:{plateNumber} </Text>
+            </View>
             <TouchableOpacity style={styles.btn} onPress={() => {navigation.navigate("VPHC")}}>
               <Text>Tạo biên bản thủ công</Text>
             </TouchableOpacity>
@@ -64,9 +68,7 @@ export default function ViolatorContact({navigation}) {
             </TouchableOpacity>
             </View>
 
-            <View>
-              <Text style={{ fontSize: 30 }}>{plateNumber}</Text>
-            </View>
+
           </View>
         ) : (
           <View style={{alignItems:"center", marginTop:"2%"}}>

@@ -1,4 +1,4 @@
-import {Text,View,TouchableOpacity,SafeAreaView, ScrollView} from 'react-native'
+import {Text,View,TouchableOpacity,SafeAreaView, ScrollView,Image} from 'react-native'
 import {styles} from './style'
 
 export default function VPHC({navigation}){
