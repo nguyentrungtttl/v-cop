@@ -27,8 +27,8 @@ export default function VPHC({navigation}){
     const phoneNum = "0123456789"
 
     return(
-        <ScrollView>
-            <View style={{alignItems:"center"}}>
+        <ScrollView style={{backgroundColor:"white"}}>
+            <View style={{marginTop:"5%",marginBottom:"3%",left:"15%"}}>
                 <TouchableOpacity style={{flexDirection:"row",right:"15%",}} onPress={()=>navigation.navigate("ViolatorInf")}>
                     <Image source={require("../../../../../assets/arrow.png")}/>
                 </TouchableOpacity>

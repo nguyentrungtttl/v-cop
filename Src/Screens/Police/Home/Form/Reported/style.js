@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     black:{
         fontWeight:"bold",
         color:"black",
-        fontSize:13
+        fontSize:12
     },
     Sblack:{
         fontSize:13,

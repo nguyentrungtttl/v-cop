@@ -4,13 +4,13 @@ import {styles} from './style'
 
 export default function ViolatorInf({navigation}){
     const violator = "Lê Tấn Minh"
-    const phoneNum = "09123#######"
+    const phoneNum = "08########"
     const address = "Trần Đăng Ninh, Hải Châu, Đà Nẵng"
     const [count,setCount] = useState(0)
     return(
         <ScrollView style={{backgroundColor:"white"}}>
             <View>
-                <View style={{flexDirection:"row",marginTop:"20%",justifyContent:"center"}}>
+                <View style={{flexDirection:"row",marginTop:"10%",justifyContent:"center"}}>
                     <TouchableOpacity style={{flexDirection:"row",right:"15%",top:"40%"}} onPress={()=>navigation.navigate("ViolatorContact")}>
                         <Image source={require("../../../../../assets/arrow.png")}/>
                     </TouchableOpacity>

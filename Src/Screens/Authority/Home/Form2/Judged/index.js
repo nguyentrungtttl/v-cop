@@ -31,7 +31,7 @@ export default function Judged({navigation}){
     const fine = "250.000VNĐ"
     return(
         <ScrollView style={{flex:2,backgroundColor:"white"}}>
-            <View style={{marginTop:"15%"}}>
+            <View style={{marginTop:"5%"}}>
                 <View style={{marginBottom:"5%",left:"5%"}}>
                     <TouchableOpacity style={{flexDirection:"row",right:"15%",}} onPress={()=>navigation.navigate("ViolatorInf")}>
                         <Image source={require("../../../../../assets/arrow.png")}/>

@@ -27,6 +27,7 @@ export default function ViolatorContact({navigation}) {
     });
     console.log('result.uri', result.assets[0].uri);
     setImageUri(result.assets[0].uri);
+    await handleRecognizePlate()
   };
 
   const handleRecognizePlate = async () => {
@@ -36,17 +37,18 @@ export default function ViolatorContact({navigation}) {
       const plateData = await recognitionPlate(imageUri);
       setPlateNumber(plateData.results[0].plate);
       console.log('License Plate Data:', plateData);
-      const handleSetOwnerData = async () =>{
-        setOwnerData(await getInfoFromPlateNumber())
-        console.log('owner data: ', ownerData);
-      }
-      handleSetOwnerData();
+      // const handleSetOwnerData = async () =>{
+      //   setOwnerData(await getInfoFromPlateNumber())
+      //   console.log('owner data: ', ownerData);
+      // }
+      // handleSetOwnerData();
     } catch (error) {
       console.error('Error recognizing plate:', error);
     }
     navigation.navigate("ViolatorInf")
 
   };
+  console.log(plateNumber);
 
   return (
     <ScrollView style={{ flex: 1, backgroundColor:"white" }}>
@@ -55,21 +57,21 @@ export default function ViolatorContact({navigation}) {
         <TouchableOpacity style={{alignItems:"center",marginTop:"10%"}} onPress={handleTakePhoto}>
           <Image style={{width:320,height:550}} source={require("../../../../assets/Camera.png")} />
         </TouchableOpacity>
-        <View>
-          <Text style={{ fontSize: 30 }}>{plateNumber}</Text>
-        </View>
 
 
         {imageUri ? (
           <View style={{alignItems:"center",marginTop:"10%"}}>
             <Image source={{ uri: imageUri }} style={{ width: 300, height: 200 }} />
 
+
             <View style={{marginTop:"5%"}}>
+
+            <Text style={{textAlign:"center"}}>Biển số xe: {plateNumber}</Text>
             <TouchableOpacity style={styles.btn} onPress={() => {navigation.navigate("VPHC")}}>
               <Text>Tạo biên bản thủ công</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.btn} onPress={handleRecognizePlate}>
+            <TouchableOpacity style={styles.btn} onPress={()=> navigation.navigate("ViolatorInf")}>
               <Text>Tạo biên bản</Text>
             </TouchableOpacity>
             </View>

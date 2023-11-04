@@ -10,7 +10,7 @@ export default function ViolatorInf({navigation}){
     return(
         <ScrollView style={{backgroundColor:"white",flex:2}}>
             <View>
-                <View style={{flexDirection:"row",marginTop:"20%",justifyContent:"center"}}>
+                <View style={{flexDirection:"row",marginTop:"5%",justifyContent:"center"}}>
                     <TouchableOpacity style={{flexDirection:"row",right:"15%",top:"40%"}} onPress={()=>navigation.navigate("ViolatorContact")}>
                         <Image source={require("../../../../../assets/arrow.png")}/>
                     </TouchableOpacity>

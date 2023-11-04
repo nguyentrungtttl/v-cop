@@ -6,14 +6,13 @@ export const styles = StyleSheet.create({
     },
     avatar:{
         width: 100,
-        height: 55,
-        flex:0.35,
-        top: "10%",
+        height: 90,
+        top: "5%",
         left:"38%",
         borderRadius:50
     },
     userInfo:{
-        top: "11%",
+        top: "6%",
         alignItems:"center",
     },
     text:{
